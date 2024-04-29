@@ -17,7 +17,7 @@ const Login = () => {
     }
     return (
 
-        <main className="w-full bg-yellow-50 h-screen flex flex-col items-center justify-center px-4">
+        <main className="w-full bg-yellow-50 h-[500px] flex flex-col items-center justify-center px-4">
             <div className="max-w-sm w-full text-gray-600 space-y-5">
                 <div className="text-center pb-8">
                     <img src={navlogo} width={150} className="mx-auto" />
