@@ -7,7 +7,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import SignUpDetails from "../components/SignupDetails";
 
-const SignUp = ({ handleClose }) => {
+const SignUp = ({ stage, setStage }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -29,7 +29,13 @@ const SignUp = ({ handleClose }) => {
         });
         console.log(res.data);
         dispatch(setUser({ name: res.data.name, email: res.data.email }));
-        handleClose();
+        // Check if the viewport width is less than a certain value (e.g., mobile screen width)
+        if (window.innerWidth < 1080) {
+          navigate("/signupdetails");
+        } else {
+          setStage(!stage)
+        }
+        // handleClose();
       } catch (error) {
         console.error("Error fetching user info:", error);
       }

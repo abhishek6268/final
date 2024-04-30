@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
+import SignUpDetails from "./SignupDetails";
 
 const AvatarMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -141,6 +142,7 @@ function LoginPopup({ onClose }) { // Pass onClose function to close the popup
 }
 function SignupPopup({ onClose }) {
     const [isOpen, setIsOpen] = useState(true);
+    const [stage,setStage] = useState(true);
 
     const handleClose = () => {
         setIsOpen(false);
@@ -177,7 +179,10 @@ function SignupPopup({ onClose }) {
                                 </svg>
                                 <span className="sr-only">Close popup</span>
                             </button>
-                            <SignUp handleClose={handleClose} />
+                           { stage ?
+                            <SignUp handleClose={handleClose} stage={stage} setStage={setStage}/>:
+                            <SignUpDetails/>
+                        }
                         </div>
                     </div>
                 </div>
