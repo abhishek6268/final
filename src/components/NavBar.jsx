@@ -14,7 +14,7 @@ const NavBar = () => {
             cName: "nav-links"
         },
         {
-            name: "our story",
+            name: "ourstory",
             path: "/products",
             cName: "nav-links"
         },
@@ -98,7 +98,7 @@ const NavBar = () => {
     return (
         <>
             <div className="w-full h-36  py-2 web:px-12  font-paragraph ">
-                <div className=" h-full mobile:px-4 flex flex-row items-center justify-between">
+                <div className=" h-full mobile:px-12 flex flex-row items-center justify-between">
                     {/*  heading  */}
                     <div className="flex flex-col items-center ">
                         <div className="text-xl md:text-5xl text-primary font-semibold uppercase">{navheading}</div>
@@ -190,7 +190,7 @@ const NavBar = () => {
                 </div>
             </div>
 
-            <div className="w-full h-16  px-12 border-2 bg-secondary  font-paragraph hidden md:block">
+            <div className="w-full h-16  px-12 border-2 bg-secondary  font-paragraph hidden web:block">
                 <div className="flex items-center justify-around mt-4">
                     {/* primary links */}
                     <div className="">
