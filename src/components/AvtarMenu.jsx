@@ -50,7 +50,7 @@ const AvatarMenu = () => {
                     onClick={() => setState(!state)}
                 >
                     <img
-                        src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXJYUFAK1iKE7XzsE-JWtQ4quUgAmp-UskLaWhkrHapQ&s"
                         className="w-full h-full rounded-full"
                     />
                 </button>
@@ -77,7 +77,7 @@ const AvatarMenu = () => {
 };
 
 
-export default () => {
+export default  () => {
     const [state, setState] = useState(false);
 
     return (

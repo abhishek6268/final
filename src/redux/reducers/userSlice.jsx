@@ -35,7 +35,7 @@ const userSlice = createSlice({
             localStorage.removeItem("userdeatils");
             state.user = null;
             state.isLoggedIn = false;
-        }
+        },
     }
 });
 // exporting the slice reducer actions

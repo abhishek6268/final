@@ -1,23 +1,49 @@
 import React, { useState } from 'react'
 import navlogo from "../assets/nik-bakers-logo.png"
 import { useDispatch } from 'react-redux';
+import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import {jwtDecode} from "jwt-decode"
+import axios from 'axios';
+import { setUser } from '../redux/reducers/userSlice';
+
+
 
 const Login = () => {
     const dispatch = useDispatch()
     //  state for handeling user login 
-    const [userDeatils,setUserDetails] = useState({
-        email:"",
-        password:""
+    const [userDeatils, setUserDetails] = useState({
+        email: "",
+        password: ""
     });
 
     // handeling user login 
-    const handleSubmit = (e) =>{
+    const handleSubmit = (e) => {
         e.preventDeafult();
         console.log(userDeatils);
-    }
+    };
+
+    //  handle google login
+    const login = useGoogleLogin({
+        onSuccess: async (response) => {
+          try {
+            const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+              headers: {
+                Authorization: `Bearer ${response.access_token}`
+              }
+            });
+          console.log(res.data);
+          dispatch(setUser({name:res.data.name, email:res.data.email}));
+          } catch (error) {
+            console.error("Error fetching user info:", error);
+          }
+        },
+        onFailure: (error) => {
+          console.error("Google login failed:", error);
+        }
+      });
     return (
 
-        <main className="w-full bg-yellow-50 h-[500px] flex flex-col items-center justify-center px-4">
+        <main className="w-full bg-yellow-50 h-[500px] flex flex-col items-center justify-center px-4 mobile:mt-14">
             <div className="max-w-sm w-full text-gray-600 space-y-5">
                 <div className="text-center pb-8">
                     <img src={navlogo} width={150} className="mx-auto" />
@@ -67,7 +93,7 @@ const Login = () => {
                         Sign in
                     </button>
                 </form>
-                <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+                <button onClick={()=>login()} className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
                     <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_17_40)">
                             <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
@@ -86,6 +112,7 @@ const Login = () => {
                 <p className="text-center">Don't have an account? <a href="javascript:void(0)" className="font-medium text-indigo-600 hover:text-indigo-500">Sign up</a></p>
             </div>
         </main>
+
 
     )
 }

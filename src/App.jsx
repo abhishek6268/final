@@ -11,21 +11,22 @@ import { setProducts } from './redux/reducers/productSlice';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import Footer from './components/Footer';
+import { fetchProducts } from './api/api';
+import SignUpDetails from './components/SignupDetails';
 
 const App = () => {
   // setting up the usedispatch to dispatvh an action 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
   // useselector for getting the state of the products 
   const productsData = useSelector((state) => state.products);
   // fetching products from the dummy api 
-  const fetchProducts = async () => {
-    const response = await fetch('https://dummyjson.com/products').then(res => res.json())
-      .then(data => dispatch(setProducts(data)));
-    console.log(response + "fetched data ");
+  const fetchProductsdetails = async () => {
+    const response = await fetchProducts();
+    dispatch(setProducts(response))
   };
   //  fetching products on initial render 
   useEffect(() => {
-    fetchProducts();
+    fetchProductsdetails();
   }, [])
   return (
     <>
@@ -35,10 +36,11 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/productdetails' element={<ProductDetails />} />
+          <Route path='/productdetails/:id' element={<ProductDetails />} />
           <Route path='/products' element={<ProductPage />} />
           <Route path='/signin' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/signupdetails' element={<SignUpDetails />} />
         </Routes>
       </div>
     </>

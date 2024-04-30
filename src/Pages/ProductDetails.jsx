@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { productDetails } from '../api/api';
 
 const ProductDetails = () => {
+    const [productDetail, setProductDetails] = useState();
+    const id = useParams();
+    console.log(id);
+    const fetchproductdetails = async () => {
+        const response = await productDetails(id.id);
+        setProductDetails(response);
+        console.log(response);
+    }
+    useEffect(() => {
+        fetchproductdetails()
+    }, [])
     return (
         <div class="font-[sans-serif]">
             <div class="p-6 lg:max-w-7xl max-w-2xl max-lg:mx-auto">
                 <div class="grid items-start grid-cols-1 lg:grid-cols-5 gap-12">
                     <div class="lg:col-span-3 bg-gray-100 w-full lg:sticky top-0 text-center p-8">
-                        <img src="https://readymadeui.com/images/coffee1.webp" alt="Product" class="w-4/5 rounded object-cover" />
+                        <img src={productDetail?.images[0]} alt="Product" class="w-4/5 rounded object-cover" />
                         <hr class="border-white border-2 my-6" />
                         <div class="flex flex-wrap gap-x-12 gap-y-6 justify-center mx-auto">
                             <img src="https://readymadeui.com/images/coffee6.webp" alt="Product1" class="w-24 cursor-pointer" />
@@ -16,10 +29,10 @@ const ProductDetails = () => {
                         </div>
                     </div>
                     <div class="lg:col-span-2">
-                        <h2 class="text-2xl font-extrabold text-gray-800">Espresso Elegante | Coffee</h2>
+                        <h2 class="text-2xl font-extrabold text-gray-800">{productDetail?.title}</h2>
                         <div class="flex flex-wrap gap-4 mt-4">
-                            <p class="text-gray-800 text-xl font-bold">$12</p>
-                            <p class="text-gray-400 text-xl"><strike>$16</strike> <span class="text-sm ml-1">Tax included</span></p>
+                            <p class="text-gray-800 text-xl font-bold">{productDetail?.discountPercentage}</p>
+                            <p class="text-gray-400 text-xl"><strike>{productDetail?.price}</strike> <span class="text-sm ml-1">Tax included</span></p>
                         </div>
                         <div class="flex space-x-2 mt-4">
                             <svg class="w-5 fill-gray-800" viewBox="0 0 14 13" fill="none"
@@ -49,10 +62,10 @@ const ProductDetails = () => {
                             </svg>
                         </div>
                         <div class="mt-8">
-                            <h3 class="text-lg font-bold text-gray-800">About the coffee</h3>
+                            <h3 class="text-lg font-bold text-gray-800">About the Product</h3>
                             <ul class="space-y-3 list-disc mt-4 pl-4 text-sm text-gray-800">
-                                <li>A cup of coffee is a beverage essential because of its timeless appeal</li>
-                                <li>You can customize your coffee by adding cream, sugar, or flavorings to suit your taste preferences.</li>
+                                <li>{productDetail?.category}</li>
+                                <li>{productDetail?.description}.</li>
                             </ul>
                         </div>
                         <div class="mt-8 max-w-md">

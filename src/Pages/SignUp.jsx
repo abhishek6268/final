@@ -14,7 +14,7 @@ const SignUp = () => {
     password: "",
   });
   //  function for handeing the form submition 
-  const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(setUser(userDeatils));
     dispatch(login(userDeatils));
@@ -25,7 +25,7 @@ const SignUp = () => {
     });
     navigate("/")
   };
-  return (
+    return (
     <main className="w-full h-auto flex flex-col items-center justify-center bg-gray-50 sm:px-4">
       <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
         <div className="text-center">
@@ -38,16 +38,7 @@ const SignUp = () => {
             <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
               Create an account
             </h3>
-            <p className="">
-              Already have an account?{" "}
-              <Link
-                 
-              to={"/signin"}
-                className="font-medium text-indigo-600 hover:text-indigo-500"
-              >
-                Sign In instead
-              </Link>
-            </p>
+
           </div>
         </div>
         <div className="bg-white shadow p-4 py-6 sm:p-6 sm:rounded-lg">
@@ -86,11 +77,11 @@ const SignUp = () => {
               />
             </div>
             <button onClick={(e)=>handleSubmit(e)} className="w-full px-4 py-2 text-white font-medium bg-tertiary hover:bg-tertiary active:bg-tertiary rounded-lg duration-150">
-              Sign Up 
+              Sign Up
             </button>
           </form>
           <div className="mt-5">
-            <button className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+            <button  className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
               <svg
                 className="w-5 h-5"
                 viewBox="0 0 48 48"

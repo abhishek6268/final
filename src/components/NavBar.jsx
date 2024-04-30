@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import navlogo from "../assets/nik-bakers-logo.png"
 import AvtarMenu from './AvtarMenu';
 import download from "../assets/menu-down-arrow.png"
+import { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import Login from "../Pages/Login";
+import SignUp from "../Pages/SignUp";
 
 const NavBar = () => {
     const navheading = `Nik Baker's`;
@@ -66,7 +70,7 @@ const NavBar = () => {
             cName: "nav-links"
         },
         {
-            name: "gift baskets",
+            name: "giftbaskets",
             path: "/",
             cName: "nav-links"
         },
@@ -97,77 +101,61 @@ const NavBar = () => {
 
     return (
         <>
-            <div className="w-full h-36  py-2 web:px-12  font-paragraph ">
+            <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph web:mt-10 ">
                 <div className=" h-full mobile:px-12 flex flex-row items-center justify-between">
                     {/*  heading  */}
                     <div className="flex flex-col items-center ">
-                        <div className="text-xl md:text-5xl text-primary font-semibold uppercase">{navheading}</div>
+                        <div className="text-xl web:text-4xl text-primary font-semibold uppercase">{navheading}</div>
                         <div className=" text-sm text-center mobile:hidden web:text-xl capitalize font-mono">{navsubheading}</div>
                     </div>
-                    <div className=""></div>
-                    <div className=""></div>
-                    <div className=""></div>
-                    <div className=""></div>
-                    <div className=""></div>
-                    <div className=""></div>
-                    <div className=""></div>
-                    <div className=""></div>
+                    <div className="w-1/12 hidden web:block"></div>
                     {/* logo */}
                     <div className="w-1/12 hidden web:block">
                         <img src={navlogo} alt="" className="" />
                     </div>
-                    {/* Mobile menu button */}
-                    <div className="flex lg:hidden">
-                        <button onClick={toggleMenu} type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
-                            {!isOpen ? (
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
-                                </svg>
-                            ) : (
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                </svg>
-                            )}
-                        </button>
-                    </div>
+
                     {/*  mobile menu links starts here  */}
-                    <div className={`text-center absolute inset-x-0 z-20 w-full px-6 py-4 h-screen top-32 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 ${isOpen ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full'}`} >
+                    <div className={`text-center absolute inset-x-0 z-20 w-full px-6 py-4 h-auto top-20 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 ${isOpen ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full'}`} >
                         <div className="flex flex-col md:flex-row md:mx-6">
-                            <div className=" web:block flex flex-col gap-12 ">
+                            <div className=" web:block flex flex-col gap-12">
                                 <ul className={`flex gap-2 ${isOpen ? 'block flex-col w-full ' : 'hidden'}`}>
                                     {navlinks.map(({ name, path }) => (
                                         <Link to={path} key={name}>
-                                            <li className="px-2 py-0.5 capitalize text-primary hover:bg-secondary rounded-lg hover:border-primary">
+                                            <li onClick={() => {
+                                                setIsOpen(!isOpen)
+                                            }} className="px-2 py-0.5 capitalize text-primary hover:bg-secondary rounded-lg hover:border-primary">
                                                 {name}
                                             </li>
                                         </Link>
                                     ))}
                                 </ul>
-
-                                {/* primary links  */}
-                                <ul className={`flex gap-2 ${isOpen ? 'block flex-col w-full ' : 'hidden'}`}>
-                                    {primarylinks.map(({ name, path }) => (
-                                       <Link to={path} key={name}>
-                                       <li className="px-2 py-0.5 capitalize text-primary hover:bg-secondary rounded-lg hover:border-primary">
-                                           {name}
-                                       </li>
-                                   </Link>
-                                    ))}
-                                </ul>
-
+                                <div className="w-full h-0.5 bg-primary"></div>
                                 {/* secondary links   */}
-                                <ul className={`flex gap-2 ${isOpen ? 'block flex-col w-full ' : 'hidden'}`}>
+                                <ul className={`flex gap-2 ${isOpen ? 'block flex-col w-full  ' : 'hidden'}`}>
                                     {secondarylinks.map(({ name, path }) => (
                                         <Link to={path} key={name}>
                                             <li className=" flex item-center justify-around mobile:w-1/2 gap-2 py-1 px-2 bg-primary text-secondary border  capitalize rounded-full mx-auto my-1">
                                                 <div className="">
                                                     {name}
                                                 </div>
-                                                 <img src={download} alt="" className='w-6' />
+                                                <img src={download} alt="" className='w-6' />
                                             </li>
 
                                         </Link>
                                     ))}
+                                </ul>
+                                <div className="w-full h-0.5 bg-primary"></div>
+                                <ul className={`flex gap-2 ${isOpen ? 'block flex-col w-full  ' : 'hidden'}`}>
+                                    <Link to={"/signin"} onClick={() => {
+                                        setIsOpen(!isOpen)
+                                    }} className=" block w-full text-center text-gray-600 hover:text-gray-900 border-t py-3 lg:hover:bg-gray-50 lg:p-3">
+                                        SignIn
+                                    </Link>
+                                    <Link to={"/signup"} onClick={() => {
+                                        setIsOpen(!isOpen)
+                                    }} className="block w-full text-center text-gray-600 hover:text-gray-900 border-t py-3 lg:hover:bg-gray-50 lg:p-3">
+                                        SignUp
+                                    </Link>
                                 </ul>
                             </div>
                         </div>
@@ -187,6 +175,20 @@ const NavBar = () => {
                         </ul>
                     </div>
                     <AvtarMenu />
+                    {/* Mobile menu button */}
+                    <div className="flex lg:hidden">
+                        <button onClick={toggleMenu} type="button" className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                            {!isOpen ? (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 8h16M4 16h16" />
+                                </svg>
+                            ) : (
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -226,8 +228,33 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
+
+
+            {/* lower links for mobile screen  */}
+            <div className="w-full h-14  px-12 border-2 bg-secondary  font-paragraph mobile:block hidden">
+                <div className="flex items-center justify-around mt-4">
+                    {/* primary links */}
+                    <div className="">
+                        <ul className="flex gap-2">
+                            {primarylinks.map(({ name, path }) => {
+                                return (
+                                    <Link to={path} key={name}>
+                                        <li className=" text-xs capitalize text-primary bg-secondary rounded ">
+                                            {name}
+                                        </li>
+                                    </Link>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
 
-export default NavBar
+export default NavBar;
+
+
+
+

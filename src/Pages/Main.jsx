@@ -41,8 +41,8 @@ const Main = () => {
                     <div className="flex mobile:flex-col mobile:h-auto items-center justify-around web:w-[80%] h-[300px] rounded-lg bg-primary text-secondary">
                         <img src={chefimage} alt="" className='mobile:hidden ' />
                         <div className="web:px-12 web:py-2 flex flex-col mobile:items-center gap-1 mobile:py-4 ">
-                            <h2 className='mobile:text-[22px] text-2xl text-secondary '>A tastefull tale of flavour and quality</h2>
-                            <p className='mobile:text-xs mobile:text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut accusamus beatae animi consequuntur distinctio corrupti tempore neque quam. Autem aut architecto recusandae eveniet repudiandae reiciendis ab, possimus et dolorem magni.</p>
+                            <h2 className='mobile:text-[18px] text-2xl text-secondary '>A tastefull tale of flavour and quality</h2>
+                            <p className='mobile:text-[12px] mobile:text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut accusamus beatae animi consequuntur distinctio corrupti tempore neque quam. Autem aut architecto recusandae eveniet repudiandae reiciendis ab, possimus et dolorem magni.</p>
                             {/* explre btn */}
                             <div className="web:p-2 py-2 web:ml-[-20px]">
                                 <button class="button">

@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../redux/reducers/cartSlice';
+import { Link } from "react-router-dom"
+import { productDetails } from '../api/api';
 
 const ProductPage = () => {
     // setting up the usedispatch to dispatvh an action 
@@ -12,7 +14,8 @@ const ProductPage = () => {
     const handleAdd = (e, item) => {
         dispatch(addItem(item));
         console.log(cartsData)
-    }
+    };
+
     return (
         <div class="font-[sans-serif]">
             <div class="p-4 mx-auto lg:max-w-6xl max-w-xl md:max-w-full mt-4">
@@ -32,7 +35,9 @@ const ProductPage = () => {
                                         </svg>
                                     </div>
                                     <div class="w-2/3 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8">
-                                        <img src={item.images[0]} alt="Product 1" class="h-full w-full object-contain" />
+                                        <Link to={`/productdetails/${item.id}`}>
+                                            <img src={item.images[0]} alt="Product 1" class="h-full w-full object-contain" />
+                                        </Link>
                                     </div>
                                     <div class="text-center mt-4">
                                         <h3 class="text-lg font-extrabold text-gray-800">{item.title}</h3>
