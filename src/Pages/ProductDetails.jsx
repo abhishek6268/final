@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { productDetails } from '../api/api';
 
@@ -13,21 +13,28 @@ const ProductDetails = () => {
     }
     useEffect(() => {
         fetchproductdetails()
-    }, [])
+    }, []);
+    const myref = useRef();
+    const handleClick = (id) => {
+      myref.current.src = productDetail?.images[id]
+    }
     return (
         <div class="font-[sans-serif]">
             <div class="p-6 lg:max-w-7xl max-w-2xl max-lg:mx-auto">
                 <div class="grid items-start grid-cols-1 lg:grid-cols-5 gap-12">
-                    <div class="lg:col-span-3 bg-gray-100 w-full lg:sticky top-0 text-center p-8">
-                        <img src={productDetail?.images[0]} alt="Product" class="w-4/5 rounded object-cover" />
-                        <hr class="border-white border-2 my-6" />
-                        <div class="flex flex-wrap gap-x-12 gap-y-6 justify-center mx-auto">
-                            <img src="https://readymadeui.com/images/coffee6.webp" alt="Product1" class="w-24 cursor-pointer" />
-                            <img src="https://readymadeui.com/images/coffee3.webp" alt="Product2" class="w-24 cursor-pointer" />
-                            <img src="https://readymadeui.com/images/coffee4.webp" alt="Product3" class="w-24 cursor-pointer" />
-                            <img src="https://readymadeui.com/images/coffee5.webp" alt="Product4" class="w-24 cursor-pointer" />
-                        </div>
-                    </div>
+                <div class="lg:col-span-3 bg-gray-100 w-full lg:sticky top-0 text-center p-8">
+    <div class="w-4/5 rounded object-cover" style={{ height: '300px' }}>
+        <img src={productDetail?.images[0]} ref={myref} alt="Product" class="w-full h-full" />
+    </div>
+    <hr class="border-white border-2 my-6" />
+    <div class="flex flex-wrap gap-x-12 gap-y-6 justify-center mx-auto">
+        <img onClick={() => handleClick(1)} src={productDetail?.images[1]} alt="Product1" class="w-24 cursor-pointer" />
+        <img onClick={() => handleClick(2)} src={productDetail?.images[2]} alt="Product2" class="w-24 cursor-pointer" />
+        <img onClick={() => handleClick(3)} src={productDetail?.images[3]} alt="Product3" class="w-24 cursor-pointer" />
+        <img onClick={() => handleClick(1)} src={productDetail?.images[1]} alt="Product4" class="w-24 cursor-pointer" />
+    </div>
+</div>
+
                     <div class="lg:col-span-2">
                         <h2 class="text-2xl font-extrabold text-gray-800">{productDetail?.title}</h2>
                         <div class="flex flex-wrap gap-4 mt-4">

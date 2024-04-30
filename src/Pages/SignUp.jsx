@@ -2,16 +2,41 @@ import React, { useState } from "react";
 import navlogo from "../assets/nik-bakers-logo.png"
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { login, setUser } from "../redux/reducers/userSlice";
+import { setUser } from "../redux/reducers/userSlice";
+import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
+import SignUpDetails from "../components/SignupDetails";
 
-const SignUp = () => {
+const SignUp = ({ handleClose }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+
   //  state for handleing the user input 
   const [userDeatils, setUserDetails] = useState({
     name: "",
     email: "",
     password: "",
+  });
+  //  handle google login
+  const login = useGoogleLogin({
+    onSuccess: async (response) => {
+      try {
+        const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
+          headers: {
+            Authorization: `Bearer ${response.access_token}`
+          }
+        });
+        console.log(res.data);
+        dispatch(setUser({ name: res.data.name, email: res.data.email }));
+        handleClose();
+      } catch (error) {
+        console.error("Error fetching user info:", error);
+      }
+    },
+    onFailure: (error) => {
+      console.error("Google login failed:", error);
+    }
   });
   //  function for handeing the form submition 
   const handleSubmit = (e) => {
@@ -25,7 +50,7 @@ const SignUp = () => {
     });
     navigate("/")
   };
-    return (
+  return (
     <main className="w-full h-auto flex flex-col items-center justify-center bg-gray-50 sm:px-4">
       <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
         <div className="text-center">
@@ -76,12 +101,12 @@ const SignUp = () => {
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
-            <button onClick={(e)=>handleSubmit(e)} className="w-full px-4 py-2 text-white font-medium bg-tertiary hover:bg-tertiary active:bg-tertiary rounded-lg duration-150">
+            <button onClick={(e) => handleSubmit(e)} className="w-full px-4 py-2 text-white font-medium bg-tertiary hover:bg-tertiary active:bg-tertiary rounded-lg duration-150">
               Sign Up
             </button>
           </form>
           <div className="mt-5">
-            <button  className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+            <button onClick={login} className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
               <svg
                 className="w-5 h-5"
                 viewBox="0 0 48 48"
@@ -122,3 +147,51 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+function SignupPopup({ onClose }) {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleClose = () => {
+    setIsOpen(false);
+    onClose(); // Call the onClose function passed from parent component
+  };
+
+  return (
+    <>
+      {isOpen && (
+        <div
+          id="signup-popup"
+          tabIndex="-1"
+          className="bg-black/50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 h-full items-center justify-center flex"
+        >
+          <div className="relative p-4 w-full max-w-md h-full md:h-auto">
+            <div className="relative bg-white rounded-lg shadow">
+              <button
+                type="button"
+                onClick={handleClose}
+                className="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center popup-close"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5"
+                  fill="#c6c7c7"
+                  viewBox="0 0 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+                <span className="sr-only">Close popup</span>
+              </button>
+              <SignUpDetails />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+

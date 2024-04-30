@@ -31,6 +31,7 @@ const AvatarMenu = () => {
         setShowSignupPopup(prevState => !prevState); // Toggle the showSignupPopup state
     };
 
+
     useEffect(() => {
         const handleDropDown = (e) => {
             if (!profileRef.current?.contains(e.target)) setState(false);
@@ -77,7 +78,7 @@ const AvatarMenu = () => {
 };
 
 
-export default  () => {
+export default () => {
     const [state, setState] = useState(false);
 
     return (
@@ -130,7 +131,7 @@ function LoginPopup({ onClose }) { // Pass onClose function to close the popup
                                 </svg>
                                 <span className="sr-only">Close popup</span>
                             </button>
-                          <Login/>
+                            <Login handleClose={handleClose} />
                         </div>
                     </div>
                 </div>
@@ -176,7 +177,7 @@ function SignupPopup({ onClose }) {
                                 </svg>
                                 <span className="sr-only">Close popup</span>
                             </button>
-                          <SignUp/>
+                            <SignUp handleClose={handleClose} />
                         </div>
                     </div>
                 </div>

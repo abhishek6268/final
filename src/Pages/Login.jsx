@@ -8,7 +8,7 @@ import { setUser } from '../redux/reducers/userSlice';
 
 
 
-const Login = () => {
+const Login = ({handleClose}) => {
     const dispatch = useDispatch()
     //  state for handeling user login 
     const [userDeatils, setUserDetails] = useState({
@@ -33,6 +33,7 @@ const Login = () => {
             });
           console.log(res.data);
           dispatch(setUser({name:res.data.name, email:res.data.email}));
+          handleClose()
           } catch (error) {
             console.error("Error fetching user info:", error);
           }
