@@ -4,7 +4,7 @@ import { addItem } from '../redux/reducers/cartSlice';
 import { Link } from "react-router-dom"
 import { productDetails } from '../api/api';
 
-const ProductPage = () => {
+const ProductContainer = ({selectedCategory,setSelectedCategory}) => {
     // setting up the usedispatch to dispatvh an action 
     const dispatch = useDispatch();
     // useselector for getting the state of the products 
@@ -15,11 +15,11 @@ const ProductPage = () => {
         dispatch(addItem(item));
         console.log(cartsData)
     };
-
+    // setproduct according to the api calls 
     return (
         <div class="font-[sans-serif]">
             <div class="px-6  py-2 mx-auto lw-full mt-4">
-                <h2 class="text-4xl  text-gray-800 mb-12  capitalize">Cookie house</h2>
+                <h2 class="text-4xl  text-gray-800 mb-12 text-center text-primary capitalize">{selectedCategory} house</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {
                         productsData.map((item) => {
@@ -63,8 +63,8 @@ const ProductPage = () => {
                 </div>
             </div>
         </div>
-      
+
     )
 }
 
-export default ProductPage
+export default ProductContainer

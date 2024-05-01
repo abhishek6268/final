@@ -19,16 +19,17 @@ const userSlice = createSlice({
         setUser:(state,action)=>{
             state.user = action.payload;
             state.loading = false;
-            state.token = "1234"
+            state.token = "1234";
             state.isLoggedIn = true;
         },
         // user login 
         login : (state,action) =>{
-            console.log(action.payload)
             const data = action.payload;
-            localStorage.setItem("userdeatils",data);
+            localStorage.setItem("userdeatils",JSON.stringify(data));
             state.user = data;
             state.isLoggedIn = true;
+            state.token = "1234";
+
         },
         //  user logout 
         logout : (state,action) =>{

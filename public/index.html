@@ -26,6 +26,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+  <style>
+    .swiper-wrapper {
+      height: max-content !important;
+
+      width: max-content;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+      content: "" !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+      content: "" !important;
+
+    }
+
+    .product-thumb .swiper-slide.swiper-slide-thumb-active>.slide\:border-indigo-600 {
+      --tw-border-opacity: 1;
+      border-color: rgb(79 70 229 / var(--tw-border-opacity));
+    }
+  </style>
 
   <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
 </head>

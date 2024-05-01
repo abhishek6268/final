@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import navlogo from "../assets/nik-bakers-logo.png"
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setUser } from "../redux/reducers/userSlice";
+import { login, setUser } from "../redux/reducers/userSlice";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import SignUpDetails from "../components/SignupDetails";
@@ -18,8 +18,9 @@ const SignUp = ({ stage, setStage }) => {
     email: "",
     password: "",
   });
+  
   //  handle google login
-  const login = useGoogleLogin({
+  const SignUpGoogle = useGoogleLogin({
     onSuccess: async (response) => {
       try {
         const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
@@ -44,6 +45,7 @@ const SignUp = ({ stage, setStage }) => {
       console.error("Google login failed:", error);
     }
   });
+
   //  function for handeing the form submition 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -88,7 +90,7 @@ const SignUp = ({ stage, setStage }) => {
             <div>
               <label className="font-medium">Email</label>
               <input
-                value={setUserDetails.email}
+                value={userDeatils.email}
                 onChange={(e) => setUserDetails({ ...userDeatils, email: e.target.value })}
                 name="email"
                 type="email"
@@ -112,7 +114,7 @@ const SignUp = ({ stage, setStage }) => {
             </button>
           </form>
           <div className="mt-5">
-            <button onClick={login} className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+            <button onClick={SignUpGoogle} className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
               <svg
                 className="w-5 h-5"
                 viewBox="0 0 48 48"

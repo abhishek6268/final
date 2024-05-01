@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 
-const NavBar = () => {
+const NavBar = ({selectedCategory,setSelectedCategory}) => {
     const navheading = `Nik Baker's`;
     const navsubheading = `run by a professional baker from australia`;
     const navlinks = [
@@ -97,7 +97,7 @@ const NavBar = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    //  hide navbar on custom pages 
+ 
     return (
         <>
             <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph web:mt-4 ">
@@ -106,9 +106,9 @@ const NavBar = () => {
                     <div className="flex mobile:gap-1 mobile:flex-row flex-col items-center ">
                         <div className="">
                             <div className="text-xl text-center web:text-4xl text-primary font-semibold uppercase">{navheading}</div>
-                            <div className=" text-sm text-center mobile:hidden web:text-lg capitalize font-mono">{navsubheading}</div>
+                            <div className=" text-sm text-center mobile:hidden web:text-md capitalize font-mono">{navsubheading}</div>
                         </div>
-                        <div className=" w-1/6 block web:hidden">
+                        <div className=" w-14 block web:hidden">
                             <img src={navlogo} alt="" className="" />
                         </div>
                     </div>
@@ -170,7 +170,10 @@ const NavBar = () => {
                             {navlinks.map(({ name, path }) => {
                                 return (
                                     <Link to={path} key={name}>
-                                        <li className=" px-2 py-0.5  capitalize text-primary bg-gray-100 hover:bg-secondary rounded-lg  hover:border-primary">
+                                        <li onClick={()=>{
+                                            console.log(name)
+                                           name == "Home" ?  setSelectedCategory(name) : console.log("lol")
+                                        }} className=" px-2 py-0.5   capitalize text-primary bg-gray-100 hover:bg-secondary rounded-lg  hover:border-primary">
                                             {name}
                                         </li>
                                     </Link>
@@ -205,7 +208,9 @@ const NavBar = () => {
                             {primarylinks.map(({ name, path }) => {
                                 return (
                                     <Link to={path} key={name}>
-                                        <li className=" px-1  capitalize text-primary bg-secondary rounded ">
+                                        <li className=" px-1  capitalize text-primary bg-secondary rounded " onClick={
+                                            ()=>setSelectedCategory(name)
+                                        }>
                                             {name}
                                         </li>
                                     </Link>
