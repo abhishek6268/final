@@ -100,7 +100,7 @@ const NavBar = ({selectedCategory,setSelectedCategory}) => {
  
     return (
         <>
-            <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph web:mt-4 ">
+            <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph ">
                 <div className=" h-full mobile:px-12 flex flex-row items-center justify-between">
                     {/*  heading  */}
                     <div className="flex mobile:gap-1 mobile:flex-row flex-col items-center ">

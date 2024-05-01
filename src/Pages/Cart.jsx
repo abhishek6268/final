@@ -49,7 +49,8 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-          </> : ""
+          </> :
+        <>Nothing in cart</>
         }
       </div>
     </div>
