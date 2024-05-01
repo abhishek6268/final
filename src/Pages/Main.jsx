@@ -45,7 +45,7 @@ const Main = () => {
                             <p className='mobile:text-[12px] mobile:text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut accusamus beatae animi consequuntur distinctio corrupti tempore neque quam. Autem aut architecto recusandae eveniet repudiandae reiciendis ab, possimus et dolorem magni.</p>
                             {/* explre btn */}
                             <div className="web:p-2 py-2 web:ml-[-20px]">
-                                <button class="button">
+                                <button className="button">
                                     <span className="ml-2 text-sm">Explore Now</span>
                                     {/* <span className=""><img src={rightarrow} alt="" /></span> */}
                                 </button>
@@ -55,9 +55,9 @@ const Main = () => {
                 </div>
             </div>
             {/* location container */}
-            <div class="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-red-900 before:opacity-85 before:z-10 ">
-                <img src={bannerimage} alt="Banner Image" class="absolute inset-0 w-full h-full object-cover" />
-                <div class="min-h-[500px] relative z-50 h-full max-w-6xl mx-auto flex mobile:flex-col justify-center gap-12 items-center text-center text-white p-6 ">
+            <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-red-900 before:opacity-85 before:z-10 ">
+                <img src={bannerimage} alt="Banner Image" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="min-h-[500px] relative z-50 h-full max-w-6xl mx-auto flex mobile:flex-col justify-center gap-12 items-center text-center text-white p-6 ">
                     <div className="text-white text-5xl font-locationtext">
                         <div className="">Locate </div>
                         <div className="">Nik Baker's</div>

@@ -79,7 +79,7 @@ const CookieSlider = () => {
                 </div>
                 {/* explre btn */}
                 <div className="p-2">
-                    <button class="button">
+                    <button className="button">
                         <span className="ml-2">Explore Now</span>
 
                         {/* <span className=""><img src={rightarrow} alt="" /></span> */}

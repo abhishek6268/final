@@ -20,7 +20,7 @@ const FlexContainer = () => {
                             <p className='w-1/2 mobile:px-2 text-sm mobile:w-full text-center'>{flexchildsubheading}</p>
                             {/* explre btn */}
                             <div className="p-2">
-                                <button class="button">
+                                <button className="button">
                                     <span className="ml-2">Explore Now</span>
                                     {/* <span className=""><img src={rightarrow} alt="" /></span> */}
                                 </button>
@@ -40,7 +40,7 @@ const FlexContainer = () => {
                             <p className='w-1/2 mobile:px-2 text-sm mobile:w-full text-center'>{flexchildsubheading}</p>
                             {/* explre btn */}
                             <div className="p-2">
-                                <button class="button">
+                                <button className="button">
                                     <span className="ml-2">Explore Now</span>
 
                                     {/* <span className=""><img src={rightarrow} alt="" /></span> */}

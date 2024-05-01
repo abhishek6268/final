@@ -12,7 +12,7 @@ const HomeTextSection = () => {
                 <p className='w-1/2 mobile:w-full text-center mobile:text-sm mobile:px-10'>{homesubheading}</p>
                 {/* explre btn */}
                 <div className="p-2 mb-6">
-                    <button class="button">
+                    <button className="button">
                         <span className="ml-2">Explore Now</span>
                         
                         {/* <span className=""><img src={rightarrow} alt="" /></span> */}

@@ -15,7 +15,7 @@ const AvatarMenu = () => {
     const profileRef = useRef(null);
     const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
     const navigation = [
-        { title: "Profile", path: "javascript:void(0)" },
+        { title: "Profile", path: "/profile" },
         { title: "Cart", path: "/cart" },
         { title: "Favourites", path: "/favrouites" },
         { title: "Settings", path: "settings" },

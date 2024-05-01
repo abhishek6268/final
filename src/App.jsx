@@ -13,6 +13,11 @@ import SignUp from './Pages/SignUp';
 import Footer from './components/Footer';
 import { fetchProducts } from './api/api';
 import SignUpDetails from './components/SignupDetails';
+import ProfilePage from './Pages/ProfilePage';
+import EditProfile from './Pages/EditProfile';
+import CheckOut from './Pages/CheckOut';
+import OrderSummary from './Pages/OrderSummary';
+import PaymentPage from './Pages/PaymentPage';
 
 const App = () => {
   // setting up the usedispatch to dispatvh an action 
@@ -40,7 +45,12 @@ const App = () => {
           <Route path='/products' element={<ProductPage />} />
           <Route path='/signin' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/checkout' element={<CheckOut />} />
+          <Route path='/editprofile' element={<EditProfile />} />
           <Route path='/signupdetails' element={<SignUpDetails />} />
+          <Route path='/ordersummary' element={<OrderSummary />} />
+          <Route path='/payment' element={<PaymentPage />} />
         </Routes>
       </div>
     </>

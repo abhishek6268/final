@@ -97,17 +97,16 @@ const NavBar = () => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    // hide navbar 
-
+    //  hide navbar on custom pages 
     return (
         <>
-            <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph web:mt-10 ">
+            <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph web:mt-4 ">
                 <div className=" h-full mobile:px-12 flex flex-row items-center justify-between">
                     {/*  heading  */}
                     <div className="flex mobile:gap-1 mobile:flex-row flex-col items-center ">
                         <div className="">
-                            <div className="text-xl web:text-4xl text-primary font-semibold uppercase">{navheading}</div>
-                            <div className=" text-sm text-center mobile:hidden web:text-xl capitalize font-mono">{navsubheading}</div>
+                            <div className="text-xl text-center web:text-4xl text-primary font-semibold uppercase">{navheading}</div>
+                            <div className=" text-sm text-center mobile:hidden web:text-lg capitalize font-mono">{navsubheading}</div>
                         </div>
                         <div className=" w-1/6 block web:hidden">
                             <img src={navlogo} alt="" className="" />
@@ -197,6 +196,7 @@ const NavBar = () => {
                 </div>
             </div>
 
+            {/* lower links  */}
             <div className="w-full h-16  px-12 border-2 bg-secondary  font-paragraph hidden web:block">
                 <div className="flex items-center justify-around mt-4">
                     {/* primary links */}
