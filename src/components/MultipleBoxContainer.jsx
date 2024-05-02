@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import logo from "../assets/nik-bakers-logo.png";
 
 const MultipleBoxContainer = () => {
     const flexchildheading = `gift happinness`;
@@ -18,11 +19,13 @@ const MultipleBoxContainer = () => {
                     <p className=' text-center mobile:w-full  mobile:w-fill'>{flexchildsubheading}</p>
                 </div>
             </div>
-            <div className="w-1/3 mobile:w-full mobile:text-xl text-3xl text-secondary font-semibold text-center mobile:m-4 ">
+            <div className="w-1/3 mobile:w-full mobile:text-xl text-3xl text-secondary font-semibold text-center mobile:m-6">
                 {/* heading */}
-                <div className="text-center px-4">Made With</div>
-                <div className="text-center px-4">Nik Orignal's</div>
-                <div className="text-center px-4">Recipies</div>
+                <div className="">
+                    <div className="text-center px-4 mobile:mt-6">Made With</div>
+                    <div className="text-center px-4">Nik Orignal's</div>
+                    <div className="text-center px-4">Recipies</div>
+                </div>
             </div>
         </div>
     )

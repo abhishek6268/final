@@ -20,6 +20,7 @@ import PaymentPage from './Pages/PaymentPage';
 import OrderConfirmation from './Pages/OrderConfirmation';
 import OrderHistory from './Pages/OrderHistory';
 import ContactUs from './components/ContactUs';
+import OurStory from './components/OurStory';
 
 const App = () => {
   //  state for handeling the category selection 
@@ -59,6 +60,7 @@ const App = () => {
           <Route path='/payment' element={<PaymentPage />} />
           <Route path='/orderconfirmation' element={<OrderConfirmation />} />
           <Route path='/orderhistory' element={<OrderHistory />} />
+          <Route path='/ourstory' element={<OurStory />} />
         </Routes>
       </div>
     </>

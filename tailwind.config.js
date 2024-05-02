@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        locationtext:["Lugrasimo" ,"serif"]
+        locationtext:["Lugrasimo" ,"serif"],
+        text:["Playfair Display"]
       },
       colors:{
         primary:"#842925",

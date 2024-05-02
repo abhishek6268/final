@@ -13,15 +13,16 @@ const FlexContainer = () => {
                 <h2 className='text-xl web:text-4xl text-center my-6 capitalize text-primary font-semibold '>{flexheading}</h2>
                 {/* flextbox starts here  */}
                 <div className="flex mobile:flex-col flex-wrap w-full mt-2 ">
-                    <div className=" bg-secondary mobile:w-full w-1/2 h-[350px] flex justify-around items-center">
-                        <div className="flex flex-col gap-2 justify-start  items-start">
+                    <div className="mobile:w-full bg-secondary w-1/2 h-[350px] flex justify-around items-center">
+                        <div className="flex flex-col gap-2 justify-around items-center">
                             {/* heading */}
-                            <div className=" text-xl web:text-4xl text-primary font-semibold  capitalize">{flexchildheading}</div>
+                            <div className=" text-xl web:text-4xl text-primary font-semibold  capitalize border text-left">{flexchildheading}</div>
                             <p className='w-1/2 mobile:px-2 text-sm mobile:w-full text-center'>{flexchildsubheading}</p>
                             {/* explre btn */}
                             <div className="p-2">
                                 <button className="button">
                                     <span className="ml-2">Explore Now</span>
+
                                     {/* <span className=""><img src={rightarrow} alt="" /></span> */}
                                 </button>
                             </div>

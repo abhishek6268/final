@@ -100,7 +100,7 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
     const [istablet, setIsTablet] = useState(false);
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 1180 && window.innerWidth > 1080) {
+            if (window.innerWidth > 1000 && window.innerWidth < 1200) {
                 setIsTablet(true);
             } else {
                 setIsTablet(false);
@@ -117,8 +117,12 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
     return (
         <>
             <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph ">
-                <div className=" h-full mobile:px-12 flex flex-row items-center justify-between">
+                <div className=" h-full px-20 mobile:px-12 flex flex-row items-center justify-between">
                     {/*  heading  */}
+                    <div className="hidden web:block"></div>
+                    <div className="hidden web:block"></div>
+                    <div className="hidden web:block"></div>
+
                     <div className="flex mobile:gap-1 mobile:flex-row flex-col items-center ">
                         <div className="">
                             <div className="text-xl text-center web:text-4xl text-primary font-semibold uppercase">{navheading}</div>
@@ -128,9 +132,10 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
                             <img src={navlogo} alt="" className="" />
                         </div>
                     </div>
-                    <div className="w-1/6 hidden web:block"></div>
+                    <div className=" w-1/6 hidden web:block"></div>
+                    <div className="hidden web:block"></div>
                     {/* logo */}
-                    <div className={` ${istablet ? "w-48" : "w-1/12 "} hidden web:block `}>
+                    <div className={` ${istablet ? "w-full" : "w-1/12 "} hidden web:block `}>
                         <img src={navlogo} alt="" className="" />
                     </div>
                     {/*  mobile menu links starts here  */}

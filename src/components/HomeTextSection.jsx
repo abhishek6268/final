@@ -11,7 +11,7 @@ const HomeTextSection = () => {
             </div>
             <div className="relative z-10 flex flex-col items-center justify-around mt-6 mobile:gap-2 gap-4">
                 {/* home text main heading */}
-                <h2 className='text-5xl mobile:text-2xl capitalize'>{hometextheading}</h2>
+                <h2 className='text-5xl mobile:text-2xl capitalize font-text'>{hometextheading}</h2>
                 <p className='w-1/2 mobile:w-full text-center mobile:text-sm mobile:px-10'>{homesubheading}</p>
                 {/* explore btn */}
                 <div className="p-2 mb-6">
