@@ -179,10 +179,10 @@ function SignupPopup({ onClose }) {
                                 </svg>
                                 <span className="sr-only">Close popup</span>
                             </button>
-                           { stage ?
+                         
                             <SignUp handleClose={handleClose} stage={stage} setStage={setStage}/>:
-                            <SignUpDetails/>
-                        }
+                            {/* <SignUpDetails /> */}
+                        
                         </div>
                     </div>
                 </div>

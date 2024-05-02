@@ -7,7 +7,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import SignUpDetails from "../components/SignupDetails";
 
-const SignUp = ({ stage, setStage }) => {
+const SignUp = ({ stage, setStage , handleClose}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -57,6 +57,8 @@ const SignUp = ({ stage, setStage }) => {
       password: "",
     });
     navigate("/")
+    setStage(!stage);
+    handleClose();
   };
   return (
     <main className="w-full h-auto flex flex-col items-center justify-center bg-gray-50 sm:px-4">

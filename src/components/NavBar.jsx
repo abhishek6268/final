@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import Login from "../Pages/Login";
 import SignUp from "../Pages/SignUp";
 
-const NavBar = ({selectedCategory,setSelectedCategory}) => {
+const NavBar = ({ selectedCategory, setSelectedCategory }) => {
     const navheading = `Nik Baker's`;
     const navsubheading = `run by a professional baker from australia`;
     const navlinks = [
@@ -97,7 +97,23 @@ const NavBar = ({selectedCategory,setSelectedCategory}) => {
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
- 
+    const [istablet, setIsTablet] = useState(false);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1180 && window.innerWidth > 1080) {
+                setIsTablet(true);
+            } else {
+                setIsTablet(false);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup function to remove event listener
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []); // Empty 
     return (
         <>
             <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph ">
@@ -106,15 +122,15 @@ const NavBar = ({selectedCategory,setSelectedCategory}) => {
                     <div className="flex mobile:gap-1 mobile:flex-row flex-col items-center ">
                         <div className="">
                             <div className="text-xl text-center web:text-4xl text-primary font-semibold uppercase">{navheading}</div>
-                            <div className=" text-sm text-center mobile:hidden web:text-md capitalize font-mono">{navsubheading}</div>
+                            <div className=" text-sm text-center whitespace-nowrap mobile:hidden web:text-md capitalize font-mono">{navsubheading}</div>
                         </div>
                         <div className=" w-14 block web:hidden">
                             <img src={navlogo} alt="" className="" />
                         </div>
                     </div>
-                    <div className="w-1/12 hidden web:block"></div>
+                    <div className="w-1/6 hidden web:block"></div>
                     {/* logo */}
-                    <div className="w-1/12 hidden web:block">
+                    <div className={` ${istablet ? "w-48" : "w-1/12 "} hidden web:block `}>
                         <img src={navlogo} alt="" className="" />
                     </div>
 
@@ -170,9 +186,9 @@ const NavBar = ({selectedCategory,setSelectedCategory}) => {
                             {navlinks.map(({ name, path }) => {
                                 return (
                                     <Link to={path} key={name}>
-                                        <li onClick={()=>{
+                                        <li onClick={() => {
                                             console.log(name)
-                                           name == "Home" ?  setSelectedCategory(name) : console.log("lol")
+                                            name == "Home" ? setSelectedCategory(name) : console.log("lol")
                                         }} className=" px-2 py-0.5   capitalize text-primary bg-gray-100 hover:bg-secondary rounded-lg  hover:border-primary">
                                             {name}
                                         </li>
@@ -200,7 +216,7 @@ const NavBar = ({selectedCategory,setSelectedCategory}) => {
             </div>
 
             {/* lower links  */}
-            <div className="w-full h-16  px-12 border-2 bg-secondary  font-paragraph hidden web:block">
+            <div className="w-full h-16  px-12  border-2 border-secondary bg-secondary  font-paragraph hidden web:block">
                 <div className="flex items-center justify-around mt-4">
                     {/* primary links */}
                     <div className="">
@@ -209,7 +225,7 @@ const NavBar = ({selectedCategory,setSelectedCategory}) => {
                                 return (
                                     <Link to={path} key={name}>
                                         <li className=" px-1  capitalize text-primary bg-secondary rounded " onClick={
-                                            ()=>setSelectedCategory(name)
+                                            () => setSelectedCategory(name)
                                         }>
                                             {name}
                                         </li>

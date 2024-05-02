@@ -19,10 +19,11 @@ import OrderSummary from './Pages/OrderSummary';
 import PaymentPage from './Pages/PaymentPage';
 import OrderConfirmation from './Pages/OrderConfirmation';
 import OrderHistory from './Pages/OrderHistory';
+import ContactUs from './components/ContactUs';
 
 const App = () => {
   //  state for handeling the category selection 
-  const [selectedCategory, setSelectedCategory] = useState("home");
+  const [selectedCategory, setSelectedCategory] = useState("Home");
   console.log(selectedCategory)
   // setting up the usedispatch to dispatvh an action 
   const dispatch = useDispatch();
@@ -47,6 +48,7 @@ const App = () => {
           <Route path='/cart' element={<Cart />} />
           <Route path='/productdetails/:id' element={<ProductDetails />} />
           <Route path='/products' element={<ProductPage />} />
+          <Route path='/contact' element={<ContactUs />} />
           <Route path='/signin' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/profile' element={<ProfilePage />} />

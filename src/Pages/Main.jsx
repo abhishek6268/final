@@ -91,7 +91,7 @@ const Main = ({ selectedCategory, setSelectedCategory }) => {
             {/* product screen */}
             <>
                 {
-                    selectedCategory != "home" &&
+                    selectedCategory != "Home" &&
                     <ProductContainer selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
                 }
             </>
