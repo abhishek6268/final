@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "../css/explorebtn.css"
 import slide from "../assets/crispy-cake-rusk-home.png";
+import "../css/slider.css"
 
 // import required modules
 import { Autoplay } from "swiper/modules";

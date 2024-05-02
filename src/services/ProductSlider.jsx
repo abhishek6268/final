@@ -5,13 +5,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import slide from "../assets/brown-bread-home.jpg";
+import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const ProductSlider = () => {
-    
+
     return (
         <>
             <Swiper
@@ -21,8 +22,8 @@ const ProductSlider = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
-                  navigation={true}
-                  modules={[Autoplay, Navigation]}
+                navigation={true}
+                modules={[Autoplay, Navigation]}
                 className="mySwiper"
                 slidesPerView={1} // Number of slides per view
                 breakpoints={{ // Adjust number of slides per view for different screen sizes
@@ -38,38 +39,24 @@ const ProductSlider = () => {
                 }}
             >
                 <SwiperSlide>
-                    <img src={slide} alt="" />
+                    <img src={slide} alt="" className="  rounded-xl" />
+                    <h3 className="p-4 text-center text-4xl text-primary font-semibold ">Brownie Crunch</h3>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide> <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide> <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={slide} alt="" />
+                    <img src={slide} alt="" className="  rounded-xl" />
+                    <h3 className="p-4 text-center text-4xl text-primary font-semibold ">Brownie Crunch</h3>
+                </SwiperSlide>   <SwiperSlide>
+                    <img src={slide} alt="" className="  rounded-xl" />
+                    <h3 className="p-4 text-center text-4xl text-primary font-semibold ">Brownie Crunch</h3>
+                </SwiperSlide>   <SwiperSlide>
+                    <img src={slide} alt="" className="  rounded-xl" />
+                    <h3 className="p-4 text-center text-4xl text-primary font-semibold ">Brownie Crunch</h3>
+                </SwiperSlide>   <SwiperSlide>
+                    <img src={slide} alt="" className="  rounded-xl" />
+                    <h3 className="p-4 text-center text-4xl text-primary font-semibold ">Brownie Crunch</h3>
+                </SwiperSlide>   <SwiperSlide>
+                    <img src={slide} alt="" className="  rounded-xl" />
+                    <h3 className="p-4 text-center text-4xl text-primary font-semibold ">Brownie Crunch</h3>
                 </SwiperSlide>
             </Swiper>
 

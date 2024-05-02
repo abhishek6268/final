@@ -122,7 +122,7 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
                     <div className="flex mobile:gap-1 mobile:flex-row flex-col items-center ">
                         <div className="">
                             <div className="text-xl text-center web:text-4xl text-primary font-semibold uppercase">{navheading}</div>
-                            <div className=" text-sm text-center whitespace-nowrap mobile:hidden web:text-md capitalize font-mono">{navsubheading}</div>
+                            <div className=" text-[10px]  font-semibold text-center whitespace-nowrap mobile:hidden web:text-md capitalize font-mono">{navsubheading}</div>
                         </div>
                         <div className=" w-14 block web:hidden">
                             <img src={navlogo} alt="" className="" />
@@ -133,7 +133,6 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
                     <div className={` ${istablet ? "w-48" : "w-1/12 "} hidden web:block `}>
                         <img src={navlogo} alt="" className="" />
                     </div>
-
                     {/*  mobile menu links starts here  */}
                     <div className={`text-center absolute inset-x-0 z-20 w-full px-6 py-4 h-auto top-20 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 ${isOpen ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full'}`} >
                         <div className="flex flex-col md:flex-row md:mx-6">

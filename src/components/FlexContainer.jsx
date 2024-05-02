@@ -7,14 +7,14 @@ const FlexContainer = () => {
     const flexchildheading = `gift happinness`;
     const flexchildsubheading = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aperiam pariatur officiis, consectetur dolores explicabo repellat quia exercitationem autem assumenda, vel minus. Aliquid itaque sed molestias dolorem vel soluta ipsum.`;
     return (
-        <div className="w-full h-auto  flex bg-yellow-100">
+        <div className="w-full h-auto  flex bg-yellow-150">
             <div className="flex flex-col items-center justify-around">
                 {/* flex heading */}
                 <h2 className='text-xl web:text-4xl text-center my-6 capitalize text-primary font-semibold '>{flexheading}</h2>
                 {/* flextbox starts here  */}
-                <div className="bg-red-400 flex mobile:flex-col flex-wrap w-full mt-2 ">
+                <div className="flex mobile:flex-col flex-wrap w-full mt-2 ">
                     <div className=" bg-secondary mobile:w-full w-1/2 h-[350px] flex justify-around items-center">
-                        <div className="flex flex-col gap-2 justify-around items-center">
+                        <div className="flex flex-col gap-2 justify-start  items-start">
                             {/* heading */}
                             <div className=" text-xl web:text-4xl text-primary font-semibold  capitalize">{flexchildheading}</div>
                             <p className='w-1/2 mobile:px-2 text-sm mobile:w-full text-center'>{flexchildsubheading}</p>
@@ -27,11 +27,11 @@ const FlexContainer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mobile:w-full  w-1/2 h-[350px]  ">
-                        <img src={fleximage} alt="" className='w-full' />
+                    <div className="mobile:w-full  w-1/2 h-[300px]   ">
+                        <img src={fleximage} alt="" className='w-full   ' />
                     </div>
                     <div className="mobile:w-full  mobile:order-4 w-1/2 h-[350px]  ">
-                        <img src={fleximage} alt="" className='w-full h-[350px]' />
+                        <img src={fleximage} alt="" className='w-full h-[350px] ' />
                     </div>
                     <div className="mobile:w-full bg-secondary w-1/2 h-[350px] flex justify-around items-center">
                         <div className="flex flex-col gap-2 justify-around items-center">
