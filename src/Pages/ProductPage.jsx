@@ -69,7 +69,7 @@ const ProductPage = () => {
                     {
                         productsData.map((item, index) => {
                             return (
-                                <section class="p-5 py-10 bg-green-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
+                                <section class="p-5 py-10 bg-yellow-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
                                     <div className="w-2/3 h-[220px] overflow-hidden mx-auto aspect-w-16 aspect-h-8 bg-transparent">
                                         <Link to={`/productdetails/${item.id}`}>
                                             <img src={item.images[0]} alt="Product 1" className="h-full w-full object-contain bg-transparent" style={{

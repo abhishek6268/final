@@ -16,7 +16,7 @@ module.exports = {
       },
       screens:{
         'mobile':{'max':'1079px'}, // 0px to 1080px
-        'web':{'min':'1080px', 'max':'1900px'}, // 1080px to 1440p
+        'web':{'min':'1080px', 'max':'3000px'}, // 1080px to 1440p
       },
     },
   },

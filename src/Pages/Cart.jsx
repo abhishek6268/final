@@ -54,7 +54,7 @@ const Cart = () => {
       </div>
       {
         !cartItems.length ? <section class="mt-10">
-          <div class="container flex flex-col items-center ">
+          <div class="w-full flex flex-col items-center ">
             <div class="flex flex-col gap-6 max-w-md text-center">
               <h2 class="font-extrabold text-9xl text-gray-600 dark:text-gray-100  flex items-center justify-around">
                 <img src="https://cdni.iconscout.com/illustration/free/thumb/free-empty-cart-4085814-3385483.png?f=webp" className='w-1/2' alt="" />

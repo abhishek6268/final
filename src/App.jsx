@@ -21,6 +21,8 @@ import OrderConfirmation from './Pages/OrderConfirmation';
 import OrderHistory from './Pages/OrderHistory';
 import ContactUs from './components/ContactUs';
 import OurStory from './components/OurStory';
+import AboutUs from './Pages/AboutUs';
+import Favourite from './Pages/Favourite';
 
 const App = () => {
   //  state for handeling the category selection 
@@ -61,6 +63,8 @@ const App = () => {
           <Route path='/orderconfirmation' element={<OrderConfirmation />} />
           <Route path='/orderhistory' element={<OrderHistory />} />
           <Route path='/ourstory' element={<OurStory />} />
+          <Route path='/aboutus' element={<AboutUs />} />
+          <Route path='/favourites' element={<Favourite />} />
         </Routes>
       </div>
     </>

@@ -28,11 +28,11 @@ const FlexContainer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mobile:w-full  w-1/2 h-[300px]   ">
-                        <img src={fleximage} alt="" className='w-full   ' />
+                    <div className="mobile:w-full  mobile:order-4 w-1/2 h-[350px] web:flex  web:items-center  web:justify-around ">
+                        <img src={fleximage} alt="" className='web:w-[80%]  web:h-[80%] mobile:w-full h-[350px] ' />
                     </div>
-                    <div className="mobile:w-full  mobile:order-4 w-1/2 h-[350px]  ">
-                        <img src={fleximage} alt="" className='w-full h-[350px] ' />
+                    <div className="mobile:w-full  mobile:order-4 w-1/2 h-[350px]  web:flex  web:items-center  web:justify-around ">
+                        <img src={fleximage} alt="" className=' web:w-[80%] web:h-[80%] h-[350px] ' />
                     </div>
                     <div className="mobile:w-full bg-secondary w-1/2 h-[350px] flex justify-around items-center">
                         <div className="flex flex-col gap-2 justify-around items-center">
