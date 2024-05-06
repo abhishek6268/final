@@ -14,7 +14,7 @@ const FlexContainer = () => {
         </h2>
         {/* flextbox starts here  */}
         <div className="flex mobile:flex-col flex-wrap w-full mt-2 ">
-          <div className="mobile:w-full bg-secondary w-1/2 h-[350px] flex justify-around items-center">
+          <div className="mobile:w-full bg-yellow-100 w-1/2 h-[350px] flex justify-around items-center">
             <div className="flex flex-col gap-2 justify-around items-center">
               {/* heading */}
               <div className=" text-xl web:text-4xl text-primary font-semibold  capitalize border text-left">
@@ -47,7 +47,7 @@ const FlexContainer = () => {
               className="web:w-[80%]  web:h-[80%] mobile:w-full h-[350px] "
             />
           </div>
-          <div className="mobile:w-full bg-secondary w-1/2 h-[350px] flex justify-around items-center">
+          <div className="mobile:w-full bg-yellow-100 w-1/2 h-[350px] flex justify-around items-center">
             <div className="flex flex-col gap-2 justify-around items-center">
               {/* heading */}
               <div className=" text-xl web:text-4xl text-primary font-semibold  capitalize border text-left">
