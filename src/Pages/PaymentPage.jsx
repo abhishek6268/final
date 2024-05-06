@@ -115,7 +115,7 @@ const PaymentPage = () => {
               class="mt-4 mb-2 block text-sm font-medium"
             >
               Card Holder
-            </img>
+            </label>
             <div class="relative">
               <input
                 type="text"

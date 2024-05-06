@@ -324,7 +324,7 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
       </div>
 
       {/* lower links for mobile screen  */}
-      <div className="w-full h-14  px-12 border-2 bg-secondary  font-paragraph mobile:block hidden">
+      <div className="w-full h-14 border-2 bg-secondary  font-paragraph mobile:block hidden">
         <div className="flex items-center justify-around mt-4">
           {/* primary links */}
           <div className="">

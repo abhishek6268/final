@@ -43,6 +43,16 @@ const Login = ({ handleClose }) => {
       console.error("Google login failed:", error);
     },
   });
+  // handle user input
+  const handleinput = (e) =>{
+    setUserDetails((pre)=>{
+      return{
+       ...pre,
+        [e.target.name]:e.target.value
+      }
+    })
+  }
+  
   return (
     <main className="w-full bg-yellow-50 h-[500px] flex flex-col items-center justify-center px-4 mobile:mt-14">
       <div className="max-w-sm w-full text-gray-600 space-y-5">
@@ -58,6 +68,9 @@ const Login = ({ handleClose }) => {
           <div>
             <label className="font-medium">Email</label>
             <input
+            name="email"
+            value={userDeatils.email}
+            onChange={(e)=>handleinput(e)}
               type="email"
               required
               className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
@@ -66,6 +79,9 @@ const Login = ({ handleClose }) => {
           <div>
             <label className="font-medium">Password</label>
             <input
+             name="email"
+             value={userDeatils.email}
+             onChange={(e)=>handleinput(e)}
               type="password"
               required
               className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
@@ -91,7 +107,12 @@ const Login = ({ handleClose }) => {
               Forgot password?
             </a>
           </div>
-          <button className="w-full px-4 py-2 text-white font-medium bg-tertiary  hover:bg-tertiary active:bg-tertiary rounded-lg duration-150">
+          <button onClick={(e)=>{
+             e.preventDefault();
+             console.log("submitted")
+             handleClose()
+
+          }}  className="w-full px-4 py-2 text-white font-medium bg-tertiary  hover:bg-tertiary active:bg-tertiary rounded-lg duration-150">
             Sign in
           </button>
         </form>
