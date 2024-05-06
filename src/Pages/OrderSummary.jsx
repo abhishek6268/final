@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -6,13 +6,24 @@ const OrderSummary = () => {
   //  getting products stored in the cart
   const orderedProducts = useSelector((state) => state.cart.cartItems);
   console.log(orderedProducts);
+  const ref = useRef();
+  //  const ref2 = useRef();
+  // useEffect(()=>{
+  //    ref.current.focus()
+  // },[])
 
   //    state for handeling billing and shipping address here
   const [shippingAddress, setShippingAddress] = useState("");
-  const [billingAddress, setBillingAddress] = useState("");
+  const [handleedit, sethandleedit] = useState({
+    isFinite: false,
+    fun: () => {
+      sethandleedit({...handleedit, isFinite: !handleedit.isFinite});
+    },
+  });
+
   return (
     <>
-      <div className="py-6 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
+      <div className="py-6 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto  bg-yellow-50 web:mt-10 mt-2">
         <div className="flex justify-start item-start space-y-2 flex-col">
           <h1 className="text-3xl dark:text-white lg:text-4xl font-semibold leading-7 text-center md:text-start lg:leading-9 text-gray-800">
             Order #13432
@@ -28,45 +39,32 @@ const OrderSummary = () => {
               <p className="text-base dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">
                 Shipping Address
               </p>
-              <input
-                value={shippingAddress}
-                onChange={(e) => {
-                  setShippingAddress(e.target.value);
-                }}
-                type="text"
-                className="border-2  w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600"
-                placeholder="Enter shipping address here"
-              />
+              {handleedit.isFinite ? (
+                <input
+                  ref={ref}
+                  value={shippingAddress}
+                  onChange={(e) => {
+                    setShippingAddress(e.target.value);
+                  }}
+                  type="text"
+                  className="border-2 bg-transparent   w-48 lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600"
+                  placeholder="Enter shipping address here"
+                /> 
+              ): null}
               <p className="w-48 font-semibold lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">
                 {shippingAddress.length
                   ? shippingAddress
-                  : "flat no xyz street no xyz bronx usa"}
-              </p>
-            </div>
-            <div className="flex justify-center md:justify-start items-center md:items-start flex-col space-y-4">
-              <p className="text-base  dark:text-white font-semibold leading-4 text-center md:text-left text-gray-800">
-                Billing Address
-              </p>
-              <input
-                value={billingAddress}
-                onChange={(e) => {
-                  setBillingAddress(e.target.value);
-                }}
-                type="text"
-                className="w-48 lg:w-full border-2  dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600"
-                placeholder="Enter Billing address here"
-              />
-              <p className="w-48 font-semibold lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">
-                {billingAddress.length
-                  ? billingAddress
-                  : "flat no xyz street no xyz bronx usa"}
+                  : "Office no 701 vvp softech vijay nagar indore"}
               </p>
             </div>
           </div>
           <div className="md:flex gap-2">
             <div className="flex mt-4 w-full justify-center items-center md:justify-start md:items-start">
-              <button className="mt-6 md:mt-0 dark:border-white dark:hover:bg-gray-900 dark:bg-transparent dark:text-white py-5 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 border border-gray-800 font-medium w-96 2xl:w-full text-base font-medium leading-4 text-gray-800">
-                Edit Details
+              <button
+                onClick={handleedit.fun}
+                className="mt-6 md:mt-0 dark:border-white dark:hover:bg-gray-900 dark:bg-transparent dark:text-white py-5 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 border border-gray-800 font-medium w-96 2xl:w-full text-base font-medium leading-4 text-gray-800"
+              >
+                {handleedit.isFinite ? "Save Changes ":"Edit Details"}
               </button>
             </div>
             <div className="flex mt-4 w-full justify-center items-center md:justify-start md:items-start">

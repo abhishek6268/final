@@ -6,7 +6,7 @@ import { login, setUser } from "../redux/reducers/userSlice";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 
-const SignUpDetails = () => {
+const SignUpDetails = ({handleClose}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -26,6 +26,7 @@ const SignUpDetails = () => {
       email: "",
       password: "",
     });
+    handleClose();
     navigate("/");
   };
 

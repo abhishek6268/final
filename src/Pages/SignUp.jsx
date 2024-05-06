@@ -35,10 +35,9 @@ const SignUp = ({ stage, setStage, handleClose }) => {
         // Check if the viewport width is less than a certain value (e.g., mobile screen width)
         if (window.innerWidth < 1080) {
           navigate("/signupdetails");
-        } else {
+          } else {
           setStage(!stage);
         }
-        // handleClose();
       } catch (error) {
         console.error("Error fetching user info:", error);
       }

@@ -8,8 +8,14 @@ import slide from "../assets/slide-3.jpg";
 
 // import required modules
 import { Autoplay } from "swiper/modules";
+import { useSelector } from "react-redux";
 
 const HomeSlider = () => {
+  //  getting slider data
+  const data = useSelector(
+    (state) => state.dynamic.dynamic.home.homeSlider.sliderimages
+  );
+  console.log(data);
   //
   return (
     <>
@@ -26,24 +32,18 @@ const HomeSlider = () => {
         <SwiperSlide>
           <img src={slide} alt="" />
         </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={slide} alt="" />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={slide} alt="" />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={slide} alt="" />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={slide} alt="" />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={slide} alt="" />
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img src={slide} alt="" />
-        </SwiperSlide>
+
+
+        {/* dynamic slides goes here */}
+        {/* {
+          data.map((item) => {
+            return (
+              <SwiperSlide>
+                <img src={item} alt="" />
+              </SwiperSlide>
+            );
+          })
+        } */}
       </Swiper>
     </>
   );

@@ -198,12 +198,15 @@ function SignupPopup({ onClose }) {
                 </svg>
                 <span className="sr-only">Close popup</span>
               </button>
-              <SignUp
-                handleClose={handleClose}
-                stage={stage}
-                setStage={setStage}
-              />
-              :{/* <SignUpDetails /> */}
+              {stage ? (
+                <SignUp
+                  handleClose={handleClose}
+                  stage={stage}
+                  setStage={setStage}
+                />
+              ) : (
+                <SignUpDetails handleClose={handleClose}/>
+              )}
             </div>
           </div>
         </div>

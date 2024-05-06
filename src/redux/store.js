@@ -5,6 +5,8 @@ import productSlice from "./reducers/productSlice";
 import userSlice from "./reducers/userSlice";
 import cartSlice from "./reducers/cartSlice";
 import favouriteSlice from "./reducers/favouriteSlice";
+import dynamic from "./reducers/Dynamic";
+
 
 const store = configureStore({
   reducer: {
@@ -12,6 +14,7 @@ const store = configureStore({
     user: userSlice,
     cart: cartSlice,
     favourite: favouriteSlice,
+    dynamic:dynamic
   },
 });
 
