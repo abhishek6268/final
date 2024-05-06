@@ -24,4 +24,4 @@ const favouiteSlice = createSlice({
 });
 
 export const { setFavouiteItem, removeFavouiteItem } = favouiteSlice.actions;
-export default favouiteSlice.reducers;
+export default favouiteSlice.reducer;

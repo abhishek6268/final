@@ -75,7 +75,7 @@ const App = () => {
           <Route path="/orderhistory" element={<OrderHistory />} />
           <Route path="/ourstory" element={<OurStory />} />
           <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/favourites" element={<Favourite />} />
+          <Route path="/favrouites" element={<Favourite />} />
         </Routes>
       </div>
     </>

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const Favourite = () => {
   //  getting product data from favourite state
-  const favouriteProducts = useSelector((state) => state.favourite);
+  const favouriteProducts = useSelector((state) => state.favourite.favouiteItems);
   console.log(favouriteProducts);
 
   return (
@@ -11,25 +11,26 @@ const Favourite = () => {
       <section className="w-screen  mt-10">
         <div className="m-4 mx-auto max-w-screen-lg rounded-md border border-gray-100 text-gray-600 shadow-md">
           <div className="relative flex h-full flex-col text-gray-600 md:flex-row">
-            <div className="mx-auto flex items-center px-5 pt-1 md:p-8">
+          {
+            favouriteProducts?.map((item)=>{
+              return <>
+                <div className="mx-auto flex items-center px-5 pt-1 md:p-8">
               <img
                 className="block h-auto max-w-full rounded-md shadow-lg"
-                src={""}
+                src={item.images[0]}
                 alt="Shop image"
               />
             </div>
             <div className="relative p-8 md:w-4/6">
               <div className="flex flex-col md:flex-row">
-                <h2 className="mb-2 text-2xl font-black">Tailby</h2>
-                <span className="ml-2 text-xs uppercase">Tailwind</span>
+                <h2 className="mb-2 text-2xl font-black">{item.title}</h2>
               </div>
               <p className="mt-3 font-sans text-base tracking-normal">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-                voluptate vero soluta voluptatum error non.
+               {item.description}
               </p>
               <div className="flex flex-col md:flex-row md:items-end">
                 <p className="mt-6 text-4xl font-black">
-                  $70<sup className="align-super text-sm">00</sup>
+                  {item.discountPercentage}<sup className="align-super text-sm">00</sup>
                 </p>
                 <span className="ml-2 text-xs uppercase">258 Sales</span>
               </div>
@@ -56,6 +57,9 @@ const Favourite = () => {
                 </button>
               </div>
             </div>
+              </>
+            })
+          }
           </div>
         </div>
       </section>

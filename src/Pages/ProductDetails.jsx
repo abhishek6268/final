@@ -634,7 +634,7 @@ const ProductDetails = () => {
                     </Link>
                   </div>
                   <div className="flex items-center gap-3">
-                    <button className="group transition-all duration-500 p-4 rounded-full bg-indigo-50 hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300">
+                    <button onClick={()=>setFavouiteItem()} className="group transition-all duration-500 p-4 rounded-full bg-indigo-50 hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="26"
