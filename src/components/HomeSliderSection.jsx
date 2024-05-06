@@ -1,13 +1,13 @@
-import React from 'react'
-import HomeSlider from '../services/HomeSlider'
+import React from "react";
+import HomeSlider from "../services/HomeSlider";
 
 const HomeSliderSection = () => {
   return (
     <div>
-    {/* home slider section  */}
-     <HomeSlider/>
+      {/* home slider section  */}
+      <HomeSlider />
     </div>
-  )
-}
+  );
+};
 
-export default HomeSliderSection
+export default HomeSliderSection;

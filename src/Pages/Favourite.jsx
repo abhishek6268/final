@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Favourite = () => {
-  //  getting product data from favourite state 
+  //  getting product data from favourite state
   const favouriteProducts = useSelector((state) => state.favourite);
   console.log(favouriteProducts);
 

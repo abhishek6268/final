@@ -1,40 +1,42 @@
 import React, { useState } from "react";
-import navlogo from "../assets/nik-bakers-logo.png"
-import {  useNavigate } from "react-router-dom";
+import navlogo from "../assets/nik-bakers-logo.png";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login, setUser } from "../redux/reducers/userSlice";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import SignUpDetails from "../components/SignupDetails";
 
-const SignUp = ({ stage, setStage , handleClose}) => {
+const SignUp = ({ stage, setStage, handleClose }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-
-  //  state for handleing the user input 
+  //  state for handleing the user input
   const [userDeatils, setUserDetails] = useState({
     name: "",
     email: "",
     password: "",
   });
-  
+
   //  handle google login
   const SignUpGoogle = useGoogleLogin({
     onSuccess: async (response) => {
       try {
-        const res = await axios.get("https://www.googleapis.com/oauth2/v3/userinfo", {
-          headers: {
-            Authorization: `Bearer ${response.access_token}`
+        const res = await axios.get(
+          "https://www.googleapis.com/oauth2/v3/userinfo",
+          {
+            headers: {
+              Authorization: `Bearer ${response.access_token}`,
+            },
           }
-        });
+        );
         console.log(res.data);
         dispatch(setUser({ name: res.data.name, email: res.data.email }));
         // Check if the viewport width is less than a certain value (e.g., mobile screen width)
         if (window.innerWidth < 1080) {
           navigate("/signupdetails");
         } else {
-          setStage(!stage)
+          setStage(!stage);
         }
         // handleClose();
       } catch (error) {
@@ -43,10 +45,10 @@ const SignUp = ({ stage, setStage , handleClose}) => {
     },
     onFailure: (error) => {
       console.error("Google login failed:", error);
-    }
+    },
   });
 
-  //  function for handeing the form submition 
+  //  function for handeing the form submition
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(setUser(userDeatils));
@@ -56,7 +58,7 @@ const SignUp = ({ stage, setStage , handleClose}) => {
       email: "",
       password: "",
     });
-    navigate("/")
+    navigate("/");
     setStage(!stage);
     handleClose();
   };
@@ -64,16 +66,11 @@ const SignUp = ({ stage, setStage , handleClose}) => {
     <main className="w-full h-auto flex flex-col items-center justify-center bg-gray-50 sm:px-4">
       <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
         <div className="text-center">
-          <img
-            src={navlogo}
-            width={150}
-            className="mx-auto"
-          />
+          <img src={navlogo} width={150} className="mx-auto" />
           <div className="mt-5 space-y-2">
             <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
               Create an account
             </h3>
-
           </div>
         </div>
         <div className="bg-white shadow p-4 py-6 sm:p-6 sm:rounded-lg">
@@ -82,7 +79,9 @@ const SignUp = ({ stage, setStage , handleClose}) => {
               <label className="font-medium">Name</label>
               <input
                 value={userDeatils.name}
-                onChange={(e) => setUserDetails({ ...userDeatils, name: e.target.value })}
+                onChange={(e) =>
+                  setUserDetails({ ...userDeatils, name: e.target.value })
+                }
                 name="name"
                 type="text"
                 required
@@ -93,7 +92,9 @@ const SignUp = ({ stage, setStage , handleClose}) => {
               <label className="font-medium">Email</label>
               <input
                 value={userDeatils.email}
-                onChange={(e) => setUserDetails({ ...userDeatils, email: e.target.value })}
+                onChange={(e) =>
+                  setUserDetails({ ...userDeatils, email: e.target.value })
+                }
                 name="email"
                 type="email"
                 required
@@ -104,19 +105,27 @@ const SignUp = ({ stage, setStage , handleClose}) => {
               <label className="font-medium">Password</label>
               <input
                 value={userDeatils.password}
-                onChange={(e) => setUserDetails({ ...userDeatils, password: e.target.value })}
+                onChange={(e) =>
+                  setUserDetails({ ...userDeatils, password: e.target.value })
+                }
                 name="password"
                 type="password"
                 required
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
-            <button onClick={(e) => handleSubmit(e)} className="w-full px-4 py-2 text-white font-medium bg-tertiary hover:bg-tertiary active:bg-tertiary rounded-lg duration-150">
+            <button
+              onClick={(e) => handleSubmit(e)}
+              className="w-full px-4 py-2 text-white font-medium bg-tertiary hover:bg-tertiary active:bg-tertiary rounded-lg duration-150"
+            >
               Sign Up
             </button>
           </form>
           <div className="mt-5">
-            <button onClick={SignUpGoogle} className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+            <button
+              onClick={SignUpGoogle}
+              className="w-full flex items-center justify-center gap-x-3 py-2.5 mt-5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100"
+            >
               <svg
                 className="w-5 h-5"
                 viewBox="0 0 48 48"
@@ -204,4 +213,3 @@ function SignupPopup({ onClose }) {
     </>
   );
 }
-

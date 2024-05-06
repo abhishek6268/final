@@ -1,5 +1,5 @@
 // creating an cart slice for cart items management
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   caches: [],
@@ -17,10 +17,10 @@ const cartSlice = createSlice({
         (item) => item.id === action.payload.id
       );
       if (duplicates.length > 0) {
-        toast.success(' Item already exists in the added to the cart');
+        toast.success(" Item already exists in the added to the cart");
       } else {
         state.cartItems.push(action.payload);
-        toast.success('Item added to the cart');
+        toast.success("Item added to the cart");
       }
     },
     setItemQuantityHigh: (state, action) => {

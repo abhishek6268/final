@@ -8,12 +8,8 @@ const OrderSummary = () => {
   console.log(orderedProducts);
 
   //    state for handeling billing and shipping address here
-  const [shippingAddress, setShippingAddress] = useState(
-    ""
-  );
-  const [billingAddress, setBillingAddress] = useState(
-   ""
-  );
+  const [shippingAddress, setShippingAddress] = useState("");
+  const [billingAddress, setBillingAddress] = useState("");
   return (
     <>
       <div className="py-6 px-4 md:px-6 2xl:px-20 2xl:container 2xl:mx-auto">
@@ -42,7 +38,7 @@ const OrderSummary = () => {
                 placeholder="Enter shipping address here"
               />
               <p className="w-48 font-semibold lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">
-                {shippingAddress .length
+                {shippingAddress.length
                   ? shippingAddress
                   : "flat no xyz street no xyz bronx usa"}
               </p>
@@ -60,7 +56,7 @@ const OrderSummary = () => {
                 className="w-48 lg:w-full border-2  dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600"
                 placeholder="Enter Billing address here"
               />
-                <p className="w-48 font-semibold lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">
+              <p className="w-48 font-semibold lg:w-full dark:text-gray-300 xl:w-48 text-center md:text-left text-sm leading-5 text-gray-600">
                 {billingAddress.length
                   ? billingAddress
                   : "flat no xyz street no xyz bronx usa"}
