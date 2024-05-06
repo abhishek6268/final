@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <!--
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -22,44 +24,89 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-  <title>React App</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
-  <style>
-    .swiper-wrapper {
-      height: max-content !important;
+    <title>React App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+    <script>
+      kofiWidgetOverlay.draw("mohamedghulam", {
+        type: "floating-chat",
+        "floating-chat.donateButton.text": "Support me",
+        "floating-chat.donateButton.background-color": "#323842",
+        "floating-chat.donateButton.text-color": "#fff",
+      });
+    </script>
 
-      width: max-content;
-    }
+    <!-- related products -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".multiple-slide-carousel", {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".multiple-slide-carousel .swiper-button-next",
+          prevEl: ".multiple-slide-carousel .swiper-button-prev",
+        },
+        breakpoints: {
+         1920: {
+             slidesPerView: 3,
+             spaceBetween: 30
+         },
+         1028: {
+             slidesPerView: 2,
+             spaceBetween: 30
+         },
+         990: {
+             slidesPerView: 1,
+             spaceBetween: 0
+         }
+       }
+      });
+     </script>
 
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after {
-      content: "" !important;
-    }
+    <style>
+      .swiper-wrapper {
+        height: max-content !important;
 
-    .swiper-button-next:after,
-    .swiper-rtl .swiper-button-prev:after {
-      content: "" !important;
+        width: max-content;
+      }
 
-    }
+      .swiper-button-prev:after,
+      .swiper-rtl .swiper-button-next:after {
+        content: "" !important;
+      }
 
-    .product-thumb .swiper-slide.swiper-slide-thumb-active>.slide\:border-indigo-600 {
-      --tw-border-opacity: 1;
-      border-color: rgb(79 70 229 / var(--tw-border-opacity));
-    }
-  </style>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
-</head>
+      .swiper-button-next:after,
+      .swiper-rtl .swiper-button-prev:after {
+        content: "" !important;
+      }
 
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
+      .product-thumb
+        .swiper-slide.swiper-slide-thumb-active
+        > .slide\:border-indigo-600 {
+        --tw-border-opacity: 1;
+        border-color: rgb(79 70 229 / var(--tw-border-opacity));
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -69,6 +116,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-</body>
-
+  </body>
 </html>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import navlogo from "../assets/nik-bakers-logo.png";
 import AvtarMenu from "./AvtarMenu";
 import download from "../assets/menu-down-arrow.png";
@@ -97,6 +97,7 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const navigate = useNavigate();
   const [istablet, setIsTablet] = useState(false);
   useEffect(() => {
     const handleResize = () => {
@@ -114,6 +115,9 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []); // Empty
+  const handlehome = () =>{
+    navigate("/");
+   }
   return (
     <>
       <div className="w-full h-36 mobile:h-20  py-2 web:px-12  font-paragraph ">
@@ -124,8 +128,8 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
           <div className="hidden web:block"></div>
 
           <div className="flex mobile:gap-1 mobile:flex-row flex-col items-center ">
-            <div className="">
-              <div className="text-xl text-center web:text-4xl text-primary font-semibold uppercase">
+            <div onClick={handlehome}  className="cursor-pointer">
+              <div  className="text-xl  text-center web:text-4xl text-primary font-semibold uppercase">
                 {navheading}
               </div>
               <div className=" text-[10px]  font-semibold text-center whitespace-nowrap mobile:hidden web:text-md capitalize font-mono">
@@ -139,8 +143,9 @@ const NavBar = ({ selectedCategory, setSelectedCategory }) => {
           <div className=" w-1/6 hidden web:block"></div>
           <div className="hidden web:block"></div>
           {/* logo */}
-          <div
-            className={` ${istablet ? "w-full" : "w-1/12 "} hidden web:block `}
+          <div 
+          onClick={handlehome}
+            className={` ${istablet ? "w-full" : "w-1/12 "} hidden web:block cursor-pointer `}
           >
             <img src={navlogo} alt="" className="" />
           </div>
