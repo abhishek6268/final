@@ -79,25 +79,27 @@ const Cart = () => {
         ) : null}
       </div>
       {!cartItems.length ? (
-        <section class="mt-10">
-          <div class="w-full flex flex-col items-center ">
-            <div class="flex flex-col gap-6 max-w-md text-center">
-              <h2 class="font-extrabold text-9xl text-gray-600 dark:text-gray-100  flex items-center justify-around">
+        <section className="mt-10">
+          <div className="w-full flex flex-col items-center ">
+            <div className="flex flex-col gap-6 max-w-md text-center">
+              <h2 className="font-extrabold text-9xl text-gray-600 dark:text-gray-100  flex items-center justify-around">
                 <img
                   src="https://cdni.iconscout.com/illustration/free/thumb/free-empty-cart-4085814-3385483.png?f=webp"
                   className="w-1/2"
                   alt=""
                 />
               </h2>
-              <p class="text-2xl md:text-3xl dark:text-gray-300 capitalize font-extralight">
+              <p className="text-2xl md:text-3xl dark:text-gray-300 capitalize font-extralight">
                 Nothing in the cart
               </p>
-              <Link
+         <div className="flex items-center justify-center">
+         <Link
                 to={"/"}
-                class="px-8 py-4 text-xl font-semibold rounded bg-primary text-gray-50 hover:text-gray-200"
+                className="px-8 mobile:w-[80%] py-4 text-xl font-semibold rounded bg-primary text-gray-50 hover:text-gray-200"
               >
                 Continue Shopping
               </Link>
+         </div>
             </div>
           </div>
         </section>

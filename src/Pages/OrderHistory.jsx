@@ -2,50 +2,50 @@ import React from "react";
 
 const OrderHistory = () => {
   return (
-    <section class="py-24 relative">
-      <div class="w-full max-w-7xl mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-12">
-          <div class="col-span-12 md:col-span-8 md:pr-8 md:border-r border-gray-200">
-            <div class="flex max-sm:flex-col items-center justify-between mb-3">
-              <h3 class="font-manrope font-bold text-2xl leading-9 text-black">
+    <section className="py-24 relative">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
+        <div className="grid grid-cols-12">
+          <div className="col-span-12 md:col-span-8 md:pr-8 md:border-r border-gray-200">
+            <div className="flex max-sm:flex-col items-center justify-between mb-3">
+              <h3 className="font-manrope font-bold text-2xl leading-9 text-black">
                 Purchase Item 1
               </h3>
-              <p class="font-medium text-lg leading-8 text-gray-500">
+              <p className="font-medium text-lg leading-8 text-gray-500">
                 Order # 91256800100
               </p>
             </div>
-            <div class="flex max-sm:flex-col items-center justify-between mb-12">
-              <h2 class="font-manrope font-bold text-3xl leading-10 text-black">
+            <div className="flex max-sm:flex-col items-center justify-between mb-12">
+              <h2 className="font-manrope font-bold text-3xl leading-10 text-black">
                 $150.00
               </h2>
-              <p class="font-semibold text-xl leading-8 text-indigo-600 cursor-pointer">
+              <p className="font-semibold text-xl leading-8 text-indigo-600 cursor-pointer">
                 Details
               </p>
             </div>
-            <div class="img-box w-full max-sm:mx-auto mb-12">
+            <div className="img-box w-full max-sm:mx-auto mb-12">
               <img
                 src="https://pagedone.io/asset/uploads/1705403665.png"
                 alt=""
-                class=""
+                className=""
               />
             </div>
-            <div class="flex items-center max-sm:flex-col md:justify-end gap-4">
-              <button class="rounded-full px-8 py-3 bg-indigo-600 shadow-sm shadow-transparent text-white font-semibold text-base transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-300">
+            <div className="flex items-center max-sm:flex-col md:justify-end gap-4">
+              <button className="rounded-full px-8 py-3 bg-indigo-600 shadow-sm shadow-transparent text-white font-semibold text-base transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-300">
                 Buy Again
               </button>
-              <button class="rounded-full px-8 py-3 bg-white shadow-sm shadow-transparent text-gray-900 border border-gray-300 font-semibold text-base transition-all duration-500 hover:bg-gray-50 hover:shadow-gray-100 hover:border-gray-400">
+              <button className="rounded-full px-8 py-3 bg-white shadow-sm shadow-transparent text-gray-900 border border-gray-300 font-semibold text-base transition-all duration-500 hover:bg-gray-50 hover:shadow-gray-100 hover:border-gray-400">
                 View product
               </button>
             </div>
           </div>
-          <div class="col-span-12 md:col-span-4 md:pl-8 max-md:mt-7 flex flex-col items-center">
-            <div class="w-full">
-              <div class="flex items-center justify-between mb-5 max-md:max-w-sm max-sm:mx-auto">
-                <h3 class="font-manrope font-bold text-2xl leading-9 text-black">
+          <div className="col-span-12 md:col-span-4 md:pl-8 max-md:mt-7 flex flex-col items-center">
+            <div className="w-full">
+              <div className="flex items-center justify-between mb-5 max-md:max-w-sm max-sm:mx-auto">
+                <h3 className="font-manrope font-bold text-2xl leading-9 text-black">
                   Write a review
                 </h3>
                 <svg
-                  class="cursor-pointer"
+                  className="cursor-pointer"
                   width="40"
                   height="40"
                   viewBox="0 0 40 40"
@@ -61,16 +61,16 @@ const OrderHistory = () => {
                   ></path>
                 </svg>
               </div>
-              <div class="flex flex-col items-center w-full max-w-sm max-sm:mx-auto">
+              <div className="flex flex-col items-center w-full max-w-sm max-sm:mx-auto">
                 <textarea
                   name="review"
                   id="review"
                   cols="30"
                   rows="10"
-                  class="py-3 px-4 mb-16 rounded-2xl border border-gray-300 w-full h-[283px] resize-none font-normal text-base leading-7 placeholder:text-gray-400 text-gray-900 outline-0 max-sm:mx-auto"
+                  className="py-3 px-4 mb-16 rounded-2xl border border-gray-300 w-full h-[283px] resize-none font-normal text-base leading-7 placeholder:text-gray-400 text-gray-900 outline-0 max-sm:mx-auto"
                   placeholder="Enter a description..."
                 ></textarea>
-                <button class="rounded-full py-3 px-5 text-center bg-indigo-600 text-white font-semibold text-base w-full max-w-sm  shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-300">
+                <button className="rounded-full py-3 px-5 text-center bg-indigo-600 text-white font-semibold text-base w-full max-w-sm  shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-300">
                   Post review
                 </button>
               </div>

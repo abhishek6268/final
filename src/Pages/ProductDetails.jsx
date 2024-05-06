@@ -197,61 +197,61 @@ const ProductDetails = () => {
     //             </div>
     //         </div>
     //     </div>
-    //     <div class="py-24">
-    //         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    //             <h2 class="font-manrope font-bold text-4xl text-black mb-8 max-lg:text-center">
+    //     <div className="py-24">
+    //         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    //             <h2 className="font-manrope font-bold text-4xl text-black mb-8 max-lg:text-center">
     //               Realted Products
     //             </h2>
-    //             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-    //                 <a href="javascript:;" class="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
-    //                     <div class="">
-    //                         <img src="https://pagedone.io/asset/uploads/1700726158.png" alt="face cream image" class="w-full aspect-square" />
+    //             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    //                 <a href="javascript:;" className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
+    //                     <div className="">
+    //                         <img src="https://pagedone.io/asset/uploads/1700726158.png" alt="face cream image" className="w-full aspect-square" />
     //                     </div>
-    //                     <div class="mt-5">
-    //                         <div class="flex items-center justify-between">
-    //                             <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Face cream</h6>
-    //                             <h6 class="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
+    //                     <div className="mt-5">
+    //                         <div className="flex items-center justify-between">
+    //                             <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Face cream</h6>
+    //                             <h6 className="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
     //                         </div>
-    //                         <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Orange & Aloe Vera</p>
+    //                         <p className="mt-2 font-normal text-sm leading-6 text-gray-500">Orange & Aloe Vera</p>
     //                     </div>
     //                 </a>
 
-    //                 <a href="javascript:;" class="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
-    //                     <div class="">
-    //                         <img src="https://pagedone.io/asset/uploads/1700726174.png" alt="plastic bottle image" class="w-full aspect-square" />
+    //                 <a href="javascript:;" className="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
+    //                     <div className="">
+    //                         <img src="https://pagedone.io/asset/uploads/1700726174.png" alt="plastic bottle image" className="w-full aspect-square" />
     //                     </div>
-    //                     <div class="mt-5">
-    //                         <div class="flex items-center justify-between">
-    //                             <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Plstic bottle</h6>
-    //                             <h6 class="font-semibold text-xl leading-8 text-indigo-600">$40</h6>
+    //                     <div className="mt-5">
+    //                         <div className="flex items-center justify-between">
+    //                             <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Plstic bottle</h6>
+    //                             <h6 className="font-semibold text-xl leading-8 text-indigo-600">$40</h6>
     //                         </div>
-    //                         <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Black color</p>
+    //                         <p className="mt-2 font-normal text-sm leading-6 text-gray-500">Black color</p>
     //                     </div>
     //                 </a>
 
-    //                 <a href="javascript:;" class="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
-    //                     <div class="">
-    //                         <img src="https://pagedone.io/asset/uploads/1700726191.png" alt="cream image" class="w-full aspect-square" />
+    //                 <a href="javascript:;" className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
+    //                     <div className="">
+    //                         <img src="https://pagedone.io/asset/uploads/1700726191.png" alt="cream image" className="w-full aspect-square" />
     //                     </div>
-    //                     <div class="mt-5">
-    //                         <div class="flex items-center justify-between">
-    //                             <h6 class="font-semibold text-xl leading-8 text-black  transition-all duration-500 group-hover:text-indigo-600">Men cream</h6>
-    //                             <h6 class="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
+    //                     <div className="mt-5">
+    //                         <div className="flex items-center justify-between">
+    //                             <h6 className="font-semibold text-xl leading-8 text-black  transition-all duration-500 group-hover:text-indigo-600">Men cream</h6>
+    //                             <h6 className="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
     //                         </div>
-    //                         <p class="mt-2 font-normal text-sm leading-6 text-gray-500">Aloe Vera and Neem</p>
+    //                         <p className="mt-2 font-normal text-sm leading-6 text-gray-500">Aloe Vera and Neem</p>
     //                     </div>
     //                 </a>
 
-    //                 <a href="javascript:;" class="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
-    //                     <div class="">
-    //                         <img src="https://pagedone.io/asset/uploads/1700726207.png" alt="perfume bottle image" class="w-full aspect-square" />
+    //                 <a href="javascript:;" className="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500">
+    //                     <div className="">
+    //                         <img src="https://pagedone.io/asset/uploads/1700726207.png" alt="perfume bottle image" className="w-full aspect-square" />
     //                     </div>
-    //                     <div class="mt-5">
-    //                         <div class="flex items-center justify-between">
-    //                             <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Cold Perfume</h6>
-    //                             <h6 class="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
+    //                     <div className="mt-5">
+    //                         <div className="flex items-center justify-between">
+    //                             <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">Cold Perfume</h6>
+    //                             <h6 className="font-semibold text-xl leading-8 text-indigo-600">$100</h6>
     //                         </div>
-    //                         <p class="mt-2 font-normal text-sm leading-6 text-gray-500">White perfume</p>
+    //                         <p className="mt-2 font-normal text-sm leading-6 text-gray-500">White perfume</p>
     //                     </div>
     //                 </a>
     //             </div>
@@ -260,41 +260,41 @@ const ProductDetails = () => {
 
     // </div>
     <>
-      <section class="py-4 relative ">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-            <div class="">
+      <section className="py-4 relative ">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+            <div className="">
               <div
                 //   style={{"--swiper-navigation-color: #fff" , "--swiper-pagination-color: #fff"}}
-                class="swiper product-prev mb-6"
+                className="swiper product-prev mb-6"
               >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                <div className="swiper-wrapper">
+                  <div className="swiper-slide">
                     <img
                       src={productDetail?.images[0]}
                       alt="Yellow Travel Bag image"
-                      class="mx-auto p-4"
+                      className="mx-auto p-4"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <img
                       src={productDetail?.images[1]}
                       alt="Yellow Travel Bag image"
-                      class="mx-auto"
+                      className="mx-auto"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <img
                       src={productDetail?.images[2]}
                       alt="Yellow Travel Bag image"
-                      class="mx-auto"
+                      className="mx-auto"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <img
                       src={productDetail?.images[3]}
                       alt="Yellow Travel Bag image"
-                      class="mx-auto"
+                      className="mx-auto"
                     />
                   </div>
                 </div>
@@ -302,49 +302,49 @@ const ProductDetails = () => {
               {/* select slider starts here */}
               <div
                 thumbsSlider=""
-                class="swiper product-thumb max-w-[608px] mx-auto"
+                className="swiper product-thumb max-w-[608px] mx-auto"
               >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                <div className="swiper-wrapper">
+                  <div className="swiper-slide">
                     <img
                       src="https://pagedone.io/asset/uploads/1700471871.png"
                       alt="Travel Bag image"
-                      class=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
+                      className=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <img
                       src="https://pagedone.io/asset/uploads/1711514930.png"
                       alt="Travel Bag image"
-                      class=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
+                      className=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <img
                       src="https://pagedone.io/asset/uploads/1700471908.png"
                       alt="Travel Bag image"
-                      class=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
+                      className=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
                     />
                   </div>
-                  <div class="swiper-slide">
+                  <div className="swiper-slide">
                     <img
                       src="https://pagedone.io/asset/uploads/1700471925.png"
                       alt="Travel Bag image"
-                      class=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
+                      className=" cursor-pointer border-2 border-gray-50 transition-all duration-500 hover:border-indigo-600 slide:border-indigo-600"
                     />
                   </div>
                 </div>
               </div>
             </div>
-            <div class="pro-detail w-full flex flex-col justify-center order-last lg:order-none max-lg:max-w-[608px] max-lg:mx-auto">
-              <p class="font-medium text-lg text-indigo-600 mb-4">
+            <div className="pro-detail w-full flex flex-col justify-center order-last lg:order-none max-lg:max-w-[608px] max-lg:mx-auto">
+              <p className="font-medium text-lg text-indigo-600 mb-4">
                 Travel &nbsp; / &nbsp; Menswear
               </p>
-              <h2 class="mb-2 font-manrope font-bold text-3xl leading-10 text-gray-900">
+              <h2 className="mb-2 font-manrope font-bold text-3xl leading-10 text-gray-900">
                 {productDetail?.title}
               </h2>
-              <div class="flex flex-col sm:flex-row sm:items-center mb-6">
-                <h6 class="font-manrope font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5">
+              <div className="flex flex-col sm:flex-row sm:items-center mb-6">
+                <h6 className="font-manrope font-semibold text-2xl leading-9 text-gray-900 pr-5 sm:border-r border-gray-200 mr-5">
                   ${productDetail?.discountPercentage}
                   {"   "}
                   <span className="text-gray-400 line-through">
@@ -352,8 +352,8 @@ const ProductDetails = () => {
                   </span>
                 </h6>
 
-                <div class="flex items-center gap-2">
-                  <div class="flex items-center gap-1">
+                <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-1">
                     <svg
                       width="20"
                       height="20"
@@ -450,23 +450,23 @@ const ProductDetails = () => {
                       </defs>
                     </svg>
                   </div>
-                  <span class="pl-2 font-normal leading-7 text-gray-500 text-sm ">
+                  <span className="pl-2 font-normal leading-7 text-gray-500 text-sm ">
                     1624 review
                   </span>
                 </div>
               </div>
-              <p class="text-gray-500 text-base font-normal mb-8 ">
+              <p className="text-gray-500 text-base font-normal mb-8 ">
                 {productDetail?.description}
               </p>
-              <div class="block w-full">
-                <p class="font-medium text-lg leading-8 text-gray-900 mb-4">
+              <div className="block w-full">
+                <p className="font-medium text-lg leading-8 text-gray-900 mb-4">
                   Variant type
                 </p>
-                <div class="text">
-                  <div class="flex items-center justify-start gap-3 md:gap-6 relative mb-6 ">
+                <div className="text">
+                  <div className="flex items-center justify-start gap-3 md:gap-6 relative mb-6 ">
                     <button
                       data-ui="checked active"
-                      class="p-2.5 border border-gray-200 rounded-full transition-all duration-300 hover:border-emerald-500 :border-emerald-500"
+                      className="p-2.5 border border-gray-200 rounded-full transition-all duration-300 hover:border-emerald-500 :border-emerald-500"
                     >
                       <svg
                         width="20"
@@ -478,7 +478,7 @@ const ProductDetails = () => {
                         <circle cx="20" cy="20" r="20" fill="#10B981" />
                       </svg>
                     </button>
-                    <button class="p-2.5 border border-gray-200 rounded-full transition-all duration-300 hover:border-amber-400 focus-within:border-amber-400">
+                    <button className="p-2.5 border border-gray-200 rounded-full transition-all duration-300 hover:border-amber-400 focus-within:border-amber-400">
                       <svg
                         width="20"
                         height="20"
@@ -489,7 +489,7 @@ const ProductDetails = () => {
                         <circle cx="20" cy="20" r="20" fill="#FBBF24" />
                       </svg>
                     </button>
-                    <button class="p-2.5 border border-gray-200 rounded-full transition-all duration-300 hover:border-red-500 focus-within:border-red-500">
+                    <button className="p-2.5 border border-gray-200 rounded-full transition-all duration-300 hover:border-red-500 focus-within:border-red-500">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="20"
@@ -500,7 +500,7 @@ const ProductDetails = () => {
                         <circle cx="20" cy="20" r="20" fill="#F43F5E" />
                       </svg>
                     </button>
-                    <button class="p-2.5 border border-gray-200 rounded-full  transition-all duration-300 hover:border-blue-400 focus-within:border-blue-400">
+                    <button className="p-2.5 border border-gray-200 rounded-full  transition-all duration-300 hover:border-blue-400 focus-within:border-blue-400">
                       <svg
                         width="20"
                         height="20"
@@ -512,30 +512,30 @@ const ProductDetails = () => {
                       </svg>
                     </button>
                   </div>
-                  <div class="block w-full mb-6">
-                    <p class="font-medium text-lg leading-8 text-gray-900 mb-4">
+                  <div className="block w-full mb-6">
+                    <p className="font-medium text-lg leading-8 text-gray-900 mb-4">
                       Kg / Ponds
                     </p>
-                    <div class="grid grid-cols-2 min-[400px]:grid-cols-3 gap-3">
-                      <button class="border border-gray-200 text-gray-900 text-lg py-2 rounded-full px-1.5 sm:px-6 w-full font-semibold whitespace-nowrap shadow-sm shadow-transparent transition-all duration-300 hover:shadow-gray-300 hover:bg-gray-50 hover:border-gray-300">
+                    <div className="grid grid-cols-2 min-[400px]:grid-cols-3 gap-3">
+                      <button className="border border-gray-200 text-gray-900 text-lg py-2 rounded-full px-1.5 sm:px-6 w-full font-semibold whitespace-nowrap shadow-sm shadow-transparent transition-all duration-300 hover:shadow-gray-300 hover:bg-gray-50 hover:border-gray-300">
                         800 gm
                       </button>
-                      <button class="border border-gray-200 text-gray-900 text-lg py-2 rounded-full px-1.5 sm:px-6 w-full font-semibold whitespace-nowrap shadow-sm shadow-transparent transition-all duration-300 hover:shadow-gray-300 hover:bg-gray-50 hover:border-gray-300">
+                      <button className="border border-gray-200 text-gray-900 text-lg py-2 rounded-full px-1.5 sm:px-6 w-full font-semibold whitespace-nowrap shadow-sm shadow-transparent transition-all duration-300 hover:shadow-gray-300 hover:bg-gray-50 hover:border-gray-300">
                         1000 gm
                       </button>
-                      <button class="border border-gray-200 text-gray-900 text-lg py-2 rounded-full px-1.5 sm:px-6 w-full font-semibold whitespace-nowrap shadow-sm shadow-transparent transition-all duration-300 hover:shadow-gray-300 hover:bg-gray-50 hover:border-gray-300">
+                      <button className="border border-gray-200 text-gray-900 text-lg py-2 rounded-full px-1.5 sm:px-6 w-full font-semibold whitespace-nowrap shadow-sm shadow-transparent transition-all duration-300 hover:shadow-gray-300 hover:bg-gray-50 hover:border-gray-300">
                         1500 gm
                       </button>
                     </div>
                   </div>
-                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                    <div class="flex items-center justify-center w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                    <div className="flex items-center justify-center w-full">
                       <button
                         onClick={() => handledecrease()}
-                        class="group py-4 px-6 border border-gray-400 rounded-l-full shadow-sm shadow-transparent transition-all duration-500 hover:shadow-gray-300 hover:bg-gray-50"
+                        className="group py-4 px-6 border border-gray-400 rounded-l-full shadow-sm shadow-transparent transition-all duration-500 hover:shadow-gray-300 hover:bg-gray-50"
                       >
                         <svg
-                          class="stroke-gray-700 transition-all duration-500 group-hover:stroke-black"
+                          className="stroke-gray-700 transition-all duration-500 group-hover:stroke-black"
                           width="22"
                           height="22"
                           viewBox="0 0 22 22"
@@ -568,16 +568,16 @@ const ProductDetails = () => {
                         type="text"
                         value={quantity}
                         onChange={(e) => setQuantity(e.target.value)}
-                        class="font-semibold text-gray-900 text-lg py-[13px] px-6 w-full lg:max-w-[118px] border-y border-gray-400 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50 focus-within:bg-gray-50 outline-0"
+                        className="font-semibold text-gray-900 text-lg py-[13px] px-6 w-full lg:max-w-[118px] border-y border-gray-400 bg-transparent placeholder:text-gray-900 text-center hover:bg-gray-50 focus-within:bg-gray-50 outline-0"
                         // placeholder={productDetail?.quantity}
                       />
 
                       <button
                         onClick={() => handleincrease()}
-                        class="group py-4 px-6 border border-gray-400 rounded-r-full shadow-sm shadow-transparent transition-all duration-500 hover:shadow-gray-300 hover:bg-gray-50"
+                        className="group py-4 px-6 border border-gray-400 rounded-r-full shadow-sm shadow-transparent transition-all duration-500 hover:shadow-gray-300 hover:bg-gray-50"
                       >
                         <svg
-                          class="stroke-gray-700 transition-all duration-500 group-hover:stroke-black"
+                          className="stroke-gray-700 transition-all duration-500 group-hover:stroke-black"
                           width="22"
                           height="22"
                           viewBox="0 0 22 22"
@@ -613,9 +613,9 @@ const ProductDetails = () => {
                         dispatch(addItem(productDetail));
                       }}
                     >
-                      <button class="group py-4 px-5 rounded-full bg-indigo-50 text-indigo-600 font-semibold text-lg w-full flex items-center justify-center gap-2 shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-100 hover:shadow-indigo-200">
+                      <button className="group py-4 px-5 rounded-full bg-indigo-50 text-indigo-600 font-semibold text-lg w-full flex items-center justify-center gap-2 shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-100 hover:shadow-indigo-200">
                         <svg
-                          class="stroke-indigo-600 transition-all duration-500"
+                          className="stroke-indigo-600 transition-all duration-500"
                           width="22"
                           height="22"
                           viewBox="0 0 22 22"
@@ -633,8 +633,8 @@ const ProductDetails = () => {
                       </button>
                     </Link>
                   </div>
-                  <div class="flex items-center gap-3">
-                    <button class="group transition-all duration-500 p-4 rounded-full bg-indigo-50 hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300">
+                  <div className="flex items-center gap-3">
+                    <button className="group transition-all duration-500 p-4 rounded-full bg-indigo-50 hover:bg-indigo-100 hover:shadow-sm hover:shadow-indigo-300">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="26"
@@ -652,7 +652,7 @@ const ProductDetails = () => {
                         />
                       </svg>
                     </button>
-                    <button class="text-center w-full px-5 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
+                    <button className="text-center w-full px-5 py-4 rounded-[100px] bg-indigo-600 flex items-center justify-center font-semibold text-lg text-white shadow-sm transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
                       <Link to={"/ordersummary"}>Buy Now</Link>
                     </button>
                   </div>
@@ -661,33 +661,33 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        <section class="py-24">
-          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 class="font-manrope font-bold text-4xl text-black mb-8 max-lg:text-center">
+        <section className="py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="font-manrope font-bold text-4xl text-black mb-8 max-lg:text-center">
               Product list
             </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <a
                 href="javascript:;"
-                class="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
+                className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
               >
-                <div class="">
+                <div className="">
                   <img
                     src="https://pagedone.io/asset/uploads/1700726158.png"
                     alt="face cream image"
-                    class="w-full aspect-square"
+                    className="w-full aspect-square"
                   />
                 </div>
-                <div class="mt-5">
-                  <div class="flex items-center justify-between">
-                    <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
+                <div className="mt-5">
+                  <div className="flex items-center justify-between">
+                    <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
                       Face cream
                     </h6>
-                    <h6 class="font-semibold text-xl leading-8 text-indigo-600">
+                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">
                       $100
                     </h6>
                   </div>
-                  <p class="mt-2 font-normal text-sm leading-6 text-gray-500">
+                  <p className="mt-2 font-normal text-sm leading-6 text-gray-500">
                     Orange & Aloe Vera
                   </p>
                 </div>
@@ -695,25 +695,25 @@ const ProductDetails = () => {
 
               <a
                 href="javascript:;"
-                class="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
+                className="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
               >
-                <div class="">
+                <div className="">
                   <img
                     src="https://pagedone.io/asset/uploads/1700726174.png"
                     alt="plastic bottle image"
-                    class="w-full aspect-square"
+                    className="w-full aspect-square"
                   />
                 </div>
-                <div class="mt-5">
-                  <div class="flex items-center justify-between">
-                    <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
+                <div className="mt-5">
+                  <div className="flex items-center justify-between">
+                    <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
                       Plstic bottle
                     </h6>
-                    <h6 class="font-semibold text-xl leading-8 text-indigo-600">
+                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">
                       $40
                     </h6>
                   </div>
-                  <p class="mt-2 font-normal text-sm leading-6 text-gray-500">
+                  <p className="mt-2 font-normal text-sm leading-6 text-gray-500">
                     Black color
                   </p>
                 </div>
@@ -721,25 +721,25 @@ const ProductDetails = () => {
 
               <a
                 href="javascript:;"
-                class="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
+                className="mx-auto sm:mr-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
               >
-                <div class="">
+                <div className="">
                   <img
                     src="https://pagedone.io/asset/uploads/1700726191.png"
                     alt="cream image"
-                    class="w-full aspect-square"
+                    className="w-full aspect-square"
                   />
                 </div>
-                <div class="mt-5">
-                  <div class="flex items-center justify-between">
-                    <h6 class="font-semibold text-xl leading-8 text-black  transition-all duration-500 group-hover:text-indigo-600">
+                <div className="mt-5">
+                  <div className="flex items-center justify-between">
+                    <h6 className="font-semibold text-xl leading-8 text-black  transition-all duration-500 group-hover:text-indigo-600">
                       Men cream
                     </h6>
-                    <h6 class="font-semibold text-xl leading-8 text-indigo-600">
+                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">
                       $100
                     </h6>
                   </div>
-                  <p class="mt-2 font-normal text-sm leading-6 text-gray-500">
+                  <p className="mt-2 font-normal text-sm leading-6 text-gray-500">
                     Aloe Vera and Neem
                   </p>
                 </div>
@@ -747,25 +747,25 @@ const ProductDetails = () => {
 
               <a
                 href="javascript:;"
-                class="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
+                className="mx-auto sm:ml-0 group cursor-pointer lg:mx-auto bg-white transition-all duration-500"
               >
-                <div class="">
+                <div className="">
                   <img
                     src="https://pagedone.io/asset/uploads/1700726207.png"
                     alt="perfume bottle image"
-                    class="w-full aspect-square"
+                    className="w-full aspect-square"
                   />
                 </div>
-                <div class="mt-5">
-                  <div class="flex items-center justify-between">
-                    <h6 class="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
+                <div className="mt-5">
+                  <div className="flex items-center justify-between">
+                    <h6 className="font-semibold text-xl leading-8 text-black transition-all duration-500 group-hover:text-indigo-600">
                       Cold Perfume
                     </h6>
-                    <h6 class="font-semibold text-xl leading-8 text-indigo-600">
+                    <h6 className="font-semibold text-xl leading-8 text-indigo-600">
                       $100
                     </h6>
                   </div>
-                  <p class="mt-2 font-normal text-sm leading-6 text-gray-500">
+                  <p className="mt-2 font-normal text-sm leading-6 text-gray-500">
                     White perfume
                   </p>
                 </div>
@@ -773,17 +773,17 @@ const ProductDetails = () => {
             </div>
           </div>
         </section>
-        <section class="relative">
-          <div class="w-full max-w-7xl px-4 md:px-5 lg:px-6 mx-auto">
-            <div class="">
-              <h2 class="font-manrope font-bold text-3xl sm:text-4xl leading-10 text-black mb-8 text-center">
+        <section className="relative">
+          <div className="w-full max-w-7xl px-4 md:px-5 lg:px-6 mx-auto">
+            <div className="">
+              <h2 className="font-manrope font-bold text-3xl sm:text-4xl leading-10 text-black mb-8 text-center">
                 Customer reviews & rating
               </h2>
-              <div class="grid grid-cols-12 mb-11">
-                <div class="col-span-12 xl:col-span-4 flex items-center">
-                  <div class="box flex flex-col gap-y-4 w-full max-xl:max-w-3xl mx-auto">
-                    <div class="flex items-center w-full">
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+              <div className="grid grid-cols-12 mb-11">
+                <div className="col-span-12 xl:col-span-4 flex items-center">
+                  <div className="box flex flex-col gap-y-4 w-full max-xl:max-w-3xl mx-auto">
+                    <div className="flex items-center w-full">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         5
                       </p>
                       <svg
@@ -805,15 +805,15 @@ const ProductDetails = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p class="h-2 w-full sm:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
-                        <span class="h-full w-[30%] rounded-[30px] bg-indigo-500 flex"></span>
+                      <p className="h-2 w-full sm:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
+                        <span className="h-full w-[30%] rounded-[30px] bg-indigo-500 flex"></span>
                       </p>
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         30
                       </p>
                     </div>
-                    <div class="flex items-center w-full">
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                    <div className="flex items-center w-full">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         4
                       </p>
                       <svg
@@ -835,15 +835,15 @@ const ProductDetails = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
-                        <span class="h-full w-[40%] rounded-[30px] bg-indigo-500 flex"></span>
+                      <p className="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
+                        <span className="h-full w-[40%] rounded-[30px] bg-indigo-500 flex"></span>
                       </p>
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         40
                       </p>
                     </div>
-                    <div class="flex items-center">
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                    <div className="flex items-center">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         3
                       </p>
                       <svg
@@ -865,15 +865,15 @@ const ProductDetails = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
-                        <span class="h-full w-[20%] rounded-[30px] bg-indigo-500 flex"></span>
+                      <p className="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
+                        <span className="h-full w-[20%] rounded-[30px] bg-indigo-500 flex"></span>
                       </p>
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         20
                       </p>
                     </div>
-                    <div class="flex items-center">
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                    <div className="flex items-center">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         2
                       </p>
                       <svg
@@ -895,15 +895,15 @@ const ProductDetails = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
-                        <span class="h-full w-[16%] rounded-[30px] bg-indigo-500 flex"></span>
+                      <p className="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
+                        <span className="h-full w-[16%] rounded-[30px] bg-indigo-500 flex"></span>
                       </p>
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         16
                       </p>
                     </div>
-                    <div class="flex items-center">
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                    <div className="flex items-center">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         1
                       </p>
                       <svg
@@ -925,24 +925,24 @@ const ProductDetails = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p class="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
-                        <span class="h-full w-[8%] rounded-[30px] bg-indigo-500 flex"></span>
+                      <p className="h-2 w-full xl:min-w-[278px] rounded-[30px] bg-gray-200 ml-5 mr-3">
+                        <span className="h-full w-[8%] rounded-[30px] bg-indigo-500 flex"></span>
                       </p>
-                      <p class="font-medium text-lg py-[1px] text-black mr-[2px]">
+                      <p className="font-medium text-lg py-[1px] text-black mr-[2px]">
                         8
                       </p>
                     </div>
                   </div>
                 </div>
-                <div class="col-span-12 max-xl:mt-8 xl:col-span-8 xl:pl-8 w-full min-h-[230px]">
-                  <div class="grid grid-cols-12 h-full px-8 max-lg:py-8 rounded-3xl bg-gray-100 w-full max-xl:max-w-3xl max-xl:mx-auto">
-                    <div class="col-span-12 md:col-span-8 flex items-center">
-                      <div class="flex flex-col sm:flex-row items-center max-lg:justify-center w-full h-full">
-                        <div class="sm:pr-3 sm:border-r border-gray-200 flex items-center justify-center flex-col">
-                          <h2 class="font-manrope font-bold text-5xl text-black text-center mb-4">
+                <div className="col-span-12 max-xl:mt-8 xl:col-span-8 xl:pl-8 w-full min-h-[230px]">
+                  <div className="grid grid-cols-12 h-full px-8 max-lg:py-8 rounded-3xl bg-gray-100 w-full max-xl:max-w-3xl max-xl:mx-auto">
+                    <div className="col-span-12 md:col-span-8 flex items-center">
+                      <div className="flex flex-col sm:flex-row items-center max-lg:justify-center w-full h-full">
+                        <div className="sm:pr-3 sm:border-r border-gray-200 flex items-center justify-center flex-col">
+                          <h2 className="font-manrope font-bold text-5xl text-black text-center mb-4">
                             4.3
                           </h2>
-                          <div class="flex items-center gap-3 mb-4">
+                          <div className="flex items-center gap-3 mb-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="36"
@@ -1039,16 +1039,16 @@ const ProductDetails = () => {
                               </defs>
                             </svg>
                           </div>
-                          <p class="font-normal text-lg leading-8 text-gray-400">
+                          <p className="font-normal text-lg leading-8 text-gray-400">
                             46 Ratings
                           </p>
                         </div>
 
-                        <div class="sm:pl-3 sm:border-l border-gray-200 flex items-center justify-center flex-col">
-                          <h2 class="font-manrope font-bold text-5xl text-black text-center mb-4">
+                        <div className="sm:pl-3 sm:border-l border-gray-200 flex items-center justify-center flex-col">
+                          <h2 className="font-manrope font-bold text-5xl text-black text-center mb-4">
                             4.8
                           </h2>
-                          <div class="flex items-center gap-3 mb-4">
+                          <div className="flex items-center gap-3 mb-4">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width="36"
@@ -1145,18 +1145,18 @@ const ProductDetails = () => {
                               </defs>
                             </svg>
                           </div>
-                          <p class="font-normal text-lg leading-8 text-gray-400">
+                          <p className="font-normal text-lg leading-8 text-gray-400">
                             Last Month
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-span-12 md:col-span-4 max-lg:mt-8 md:pl-8">
-                      <div class="flex items-center flex-col justify-center w-full h-full ">
-                        <button class="rounded-full px-6 py-4 bg-indigo-600 font-semibold text-lg text-white whitespace-nowrap mb-6 w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
+                    <div className="col-span-12 md:col-span-4 max-lg:mt-8 md:pl-8">
+                      <div className="flex items-center flex-col justify-center w-full h-full ">
+                        <button className="rounded-full px-6 py-4 bg-indigo-600 font-semibold text-lg text-white whitespace-nowrap mb-6 w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-700 hover:shadow-indigo-400">
                           Write A Review
                         </button>
-                        <button class="rounded-full px-6 py-4 bg-white font-semibold text-lg text-indigo-600 whitespace-nowrap w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-100 hover:shadow-indigo-200">
+                        <button className="rounded-full px-6 py-4 bg-white font-semibold text-lg text-indigo-600 whitespace-nowrap w-full text-center shadow-sm shadow-transparent transition-all duration-500 hover:bg-indigo-100 hover:shadow-indigo-200">
                           See All Reviews
                         </button>
                       </div>
@@ -1164,12 +1164,12 @@ const ProductDetails = () => {
                   </div>
                 </div>
               </div>
-              <div class="pb-8 border-b border-gray-200 max-xl:max-w-3xl max-xl:mx-auto">
-                <h4 class="font-manrope font-semibold text-3xl leading-10 text-black mb-6">
+              <div className="pb-8 border-b border-gray-200 max-xl:max-w-3xl max-xl:mx-auto">
+                <h4 className="font-manrope font-semibold text-3xl leading-10 text-black mb-6">
                   Most helpful positive review
                 </h4>
-                <div class="flex sm:items-center flex-col sm:flex-row justify-between  mb-4">
-                  <div class="flex items-center gap-3">
+                <div className="flex sm:items-center flex-col sm:flex-row justify-between  mb-4">
+                  <div className="flex items-center gap-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="30"
@@ -1266,17 +1266,17 @@ const ProductDetails = () => {
                       </defs>
                     </svg>
                   </div>
-                  <div class="flex items-center gap-3">
-                    <h6 class="font-semibold text-lg leading-8 text-black">
+                  <div className="flex items-center gap-3">
+                    <h6 className="font-semibold text-lg leading-8 text-black">
                       @john.doe
                     </h6>
-                    <p class="font-medium text-base leading-7 text-gray-400">
+                    <p className="font-medium text-base leading-7 text-gray-400">
                       Nov 01, 2023
                     </p>
                   </div>
                 </div>
 
-                <p class="font-normal text-lg leading-8 text-gray-500 ">
+                <p className="font-normal text-lg leading-8 text-gray-500 ">
                   I recently had the opportunity to explore Pagedone's UI design
                   system, and it left a lasting impression on my workflow. The
                   system seamlessly blends user-friendly features with a robust
@@ -1284,31 +1284,31 @@ const ProductDetails = () => {
                   visually stunning and consistent interfaces.
                 </p>
               </div>
-              <div class="flex flex-col sm:flex-row items-center justify-between pt-8  max-xl:max-w-3xl max-xl:mx-auto">
-                <p class="font-normal text-lg py-[1px] text-black">
+              <div className="flex flex-col sm:flex-row items-center justify-between pt-8  max-xl:max-w-3xl max-xl:mx-auto">
+                <p className="font-normal text-lg py-[1px] text-black">
                   46 reviews
                 </p>
                 <form>
-                  <div class="flex">
-                    <div class="relative ">
-                      <div class=" absolute -left-0 px-2 top-0 py-2">
-                        <p class="font-normal text-lg leading-8 text-gray-500">
+                  <div className="flex">
+                    <div className="relative ">
+                      <div className=" absolute -left-0 px-2 top-0 py-2">
+                        <p className="font-normal text-lg leading-8 text-gray-500">
                           Sort by:
                         </p>
                       </div>
                       <input
                         type="text"
-                        class="block w-60 h-11 pr-4 pl-20 py-2.5 text-lg leading-8 font-medium rounded-full cursor-pointer shadow-xs text-black bg-transparent placeholder-black focus:outline-gray-200 "
+                        className="block w-60 h-11 pr-4 pl-20 py-2.5 text-lg leading-8 font-medium rounded-full cursor-pointer shadow-xs text-black bg-transparent placeholder-black focus:outline-gray-200 "
                         placeholder="Most Relevant"
                       />
                       <div
                         id="dropdown-button"
                         data-target="dropdown"
-                        class="dropdown-toggle flex-shrink-0 cursor-pointer z-10 inline-flex items-center py-2.5 px-4 text-base font-medium text-center text-gray-900 bg-transparent absolute right-0 top-2 pl-2 "
+                        className="dropdown-toggle flex-shrink-0 cursor-pointer z-10 inline-flex items-center py-2.5 px-4 text-base font-medium text-center text-gray-900 bg-transparent absolute right-0 top-2 pl-2 "
                         type="button"
                       >
                         <svg
-                          class="ml-2"
+                          className="ml-2"
                           width="12"
                           height="7"
                           viewBox="0 0 12 7"
@@ -1326,16 +1326,16 @@ const ProductDetails = () => {
                       </div>
                       <div
                         id="dropdown"
-                        class="absolute top-9 right-0 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                        className="absolute top-9 right-0 z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                       >
                         <ul
-                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          className="py-2 text-sm text-gray-700 dark:text-gray-200"
                           aria-labelledby="dropdown-button"
                         >
                           <li>
                             <a
                               href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
                               Most Relevant
                             </a>
@@ -1343,7 +1343,7 @@ const ProductDetails = () => {
                           <li>
                             <a
                               href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
                               last week
                             </a>
@@ -1351,7 +1351,7 @@ const ProductDetails = () => {
                           <li>
                             <a
                               href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                             >
                               oldest
                             </a>
